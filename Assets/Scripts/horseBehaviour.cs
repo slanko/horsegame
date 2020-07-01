@@ -8,6 +8,7 @@ public class horseBehaviour : MonoBehaviour
     NavMeshAgent nav;
     Vector3 navPos;
     public float moveWaitTimeMin, moveWaitTimeMax, moveDistanceMin, moveDistanceMax;
+    public string horseName;
     // Start is called before the first frame update
     void Start()
     {

@@ -116,7 +116,7 @@ public class characterController : MonoBehaviour
         dB.enabled = true;
         if (Input.GetKeyDown(charInt.interactKey))
         {
-
+            goToGrounded();
         }
     }
 
@@ -134,6 +134,15 @@ public class characterController : MonoBehaviour
     public void goToRide()
     {
         currentState = playerState.RIDING;
+    }
+
+    public void goToGrounded()
+    {
+        charInt.hB.beingRidden = false;
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
+        myCap.enabled = true;
+        transform.SetParent(null);
+        currentState = playerState.GROUNDED;
     }
 
     // Update is called once per frame

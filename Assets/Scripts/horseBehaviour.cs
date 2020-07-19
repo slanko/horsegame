@@ -11,6 +11,8 @@ public class horseBehaviour : MonoBehaviour
     public float moveWaitTimeMin, moveWaitTimeMax, moveDistanceMin, moveDistanceMax, moveSpeed, camSensitivityX;
     public string horseName;
     public Transform myRideAnchor;
+    godScript GOD;
+    characterController cC;
     [Header("Taming Stuff")]
     public float tamingGoal, timerDecrease;
 
@@ -23,6 +25,8 @@ public class horseBehaviour : MonoBehaviour
     void Start()
     {
         myRideAnchor = transform.Find("Model Parent/RideAnchor");
+        GOD = GameObject.Find("GOD").GetComponent<godScript>();
+        cC = GameObject.Find("Player").GetComponent<characterController>();
         nav = GetComponent<NavMeshAgent>();
         changePosition();
     }
@@ -58,7 +62,10 @@ public class horseBehaviour : MonoBehaviour
 
     void horseTamingUpdate()
     {
-
+        if(GOD.tamingSlider.value <= GOD.tamingSlider.minValue)
+        {
+            cC.goToGrounded();
+        }
     }
 
     void changePosition()

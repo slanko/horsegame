@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class horseBehaviour : MonoBehaviour
 {
+    Animator anim;
     NavMeshAgent nav;
     Vector3 navPos;
     public bool isTamed, beingRidden;
@@ -15,6 +16,7 @@ public class horseBehaviour : MonoBehaviour
     characterController cC;
     [Header("Taming Stuff")]
     public float tamingGoal, timerDecrease;
+    horseFunctionsScript hFS;
 
     //horse riding movement stuff
     float vert, horiz;
@@ -24,10 +26,16 @@ public class horseBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         myRideAnchor = transform.Find("Model Parent/RideAnchor");
         GOD = GameObject.Find("GOD").GetComponent<godScript>();
         cC = GameObject.Find("Player").GetComponent<characterController>();
         nav = GetComponent<NavMeshAgent>();
+        hFS = GetComponent<horseFunctionsScript>();
+        if(hFS == null)
+        {
+            hFS = new horseFunctionsScript();
+        }
         changePosition();
     }
 
@@ -49,6 +57,16 @@ public class horseBehaviour : MonoBehaviour
         else
         {
             nav.enabled = true;
+        }
+
+        //probably could do this cleaner with the functions but i'm just getting it working
+        if (cC.currentState == characterController.playerState.TAMING)
+        {
+            anim.SetBool("goingCrazy", true);
+        }
+        else
+        {
+            anim.SetBool("goingCrazy", false);
         }
     }
 

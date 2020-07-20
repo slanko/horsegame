@@ -25,6 +25,7 @@ public class characterController : MonoBehaviour
     public DynamicBone dB;
     public KeyCode tameKey;
     public bool enteredTaming;
+    public KeyCode throwKey;
 
 
     //debug stuff

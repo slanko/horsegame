@@ -12,6 +12,8 @@ public class characterInteract : MonoBehaviour
     characterController cC;
     public KeyCode interactKey;
     public horseBehaviour hB;
+
+    public List<GameObject> heldThrowables;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,7 @@ public class characterInteract : MonoBehaviour
     {
         if(cC.currentState == characterController.playerState.GROUNDED || cC.currentState == characterController.playerState.JUMPING)
         {
-            if (Physics.Raycast(transform.position, cC.cam.transform.forward, out var rayHit, interactDistance, interactableLayers))
+            if (Physics.Raycast(cC.cam.transform.position, cC.cam.transform.forward, out var rayHit, interactDistance, interactableLayers))
             {
                 if (rayHit.collider.gameObject.tag == "horse")
                 {
@@ -46,6 +48,16 @@ public class characterInteract : MonoBehaviour
                         }
                     }
                 }
+                if(rayHit.collider.gameObject.tag == "throwable")
+                {
+                    var tS = rayHit.collider.gameObject.GetComponent<throwablesScript>();
+                    targetName.text = tS.myName;
+                    if (Input.GetKeyDown(interactKey))
+                    {
+                        heldThrowables.Add(rayHit.collider.gameObject);
+                        rayHit.collider.gameObject.SetActive(false);
+                    }
+                }
             }
             else
             {
@@ -56,6 +68,10 @@ public class characterInteract : MonoBehaviour
         {
             targetName.text = "";
         }
-
+        if (Input.GetKeyDown(cC.throwKey))
+        {
+            heldThrowables[0].transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + .5f);
+            heldThrowables[0].SetActive(true);
+        }
     }
 }

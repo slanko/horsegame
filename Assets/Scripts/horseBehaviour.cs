@@ -82,7 +82,7 @@ public class horseBehaviour : MonoBehaviour
     {
         if(GOD.tamingSlider.value <= GOD.tamingSlider.minValue)
         {
-            cC.goToGrounded();
+            cC.goToRagdoll();
         }
     }
 

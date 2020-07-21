@@ -27,6 +27,10 @@ public class characterController : MonoBehaviour
     public bool enteredTaming;
     public KeyCode throwKey;
 
+    //ragdoll mode stuff
+    [Header ("Ragdoll Mode Variables")]
+    goToThing spinCamGoTo;
+    public GameObject myRagdoll;
 
     //debug stuff
     public Text debugText;
@@ -39,6 +43,7 @@ public class characterController : MonoBehaviour
         charInt = GetComponent<characterInteract>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        spinCamGoTo = GameObject.Find("spinnyCam").GetComponent<goToThing>();
     }
 
     private void Update()
@@ -61,7 +66,7 @@ public class characterController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            currentState = playerState.RAGDOLL;
+            goToRagdoll();
         }
 
         if (currentState == playerState.GROUNDED)
@@ -144,6 +149,13 @@ public class characterController : MonoBehaviour
         myCap.enabled = true;
         transform.SetParent(null);
         currentState = playerState.GROUNDED;
+    }
+
+    public void goToRagdoll()
+    {
+        currentState = playerState.RAGDOLL;
+        GameObject thaRagdoll = Instantiate(myRagdoll, transform.position, transform.rotation, null);
+        spinCamGoTo.targetToFollow = thaRagdoll.GetComponent<ragdollLaunchScript>().myHips;
     }
 
     // Update is called once per frame

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - horse
   - throwable
+  - ground
   layers:
   - Default
   - TransparentFX

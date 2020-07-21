@@ -13,6 +13,7 @@ public class throwablesScript : MonoBehaviour
     }
     public throwableTypes myType;
     public string myName;
+    public Sprite myImage;
 
     // Start is called before the first frame update
     void Start()

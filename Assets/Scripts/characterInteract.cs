@@ -13,6 +13,12 @@ public class characterInteract : MonoBehaviour
     public KeyCode interactKey;
     public horseBehaviour hB;
 
+    //throwing stuff
+    [Header ("Throwing Stuff")]
+    public Image throwableUI;
+    public Sprite nadaSprite;
+    public GameObject throwPoint;
+
     public List<GameObject> heldThrowables;
     // Start is called before the first frame update
     void Start()
@@ -68,10 +74,24 @@ public class characterInteract : MonoBehaviour
         {
             targetName.text = "";
         }
-        if (Input.GetKeyDown(cC.throwKey))
+
+        if(heldThrowables.Count > 0)
         {
-            heldThrowables[0].transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + .5f);
-            heldThrowables[0].SetActive(true);
+            if (Input.GetKeyDown(cC.throwKey))
+            {
+                heldThrowables[0].transform.position = throwPoint.transform.position;
+                heldThrowables[0].transform.rotation = throwPoint.transform.rotation;
+                heldThrowables[0].SetActive(true);
+                heldThrowables[0].GetComponent<Rigidbody>().AddForce(throwPoint.transform.forward * 20, ForceMode.Impulse);
+                heldThrowables.Remove(heldThrowables[0]);
+            }
+            //set UI image
+            throwableUI.sprite = heldThrowables[0].GetComponent<throwablesScript>().myImage;
         }
+        else
+        {
+            throwableUI.sprite = nadaSprite;
+        }
+
     }
 }

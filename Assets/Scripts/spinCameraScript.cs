@@ -14,7 +14,7 @@ public class spinCameraScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(cC.currentState == characterController.playerState.TAMING)
+        if(cC.currentState == characterController.playerState.TAMING || cC.currentState == characterController.playerState.RAGDOLL)
         {
             spinCam.SetActive(true);
         }

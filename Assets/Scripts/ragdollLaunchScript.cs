@@ -5,7 +5,7 @@ using UnityEngine;
 public class ragdollLaunchScript : MonoBehaviour
 {
     bool launched = false;
-    bool resetInvoked;
+    bool resetInvoked = false;
     public bool willLaunch;
     public float launchForce;
     Rigidbody rb;
@@ -21,6 +21,7 @@ public class ragdollLaunchScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(rb.velocity.magnitude);
         if(willLaunch == true)
         {
             if (launched == false)
@@ -30,18 +31,32 @@ public class ragdollLaunchScript : MonoBehaviour
             }
         }
 
-        if(rb.velocity.y < 1)
+        if(rb.velocity.magnitude < 1)
         {
             if(resetInvoked == false)
             {
-                Invoke("goToGoToGrounded", 3);
+                StartCoroutine(ragdollReset());
                 resetInvoked = true;
             }
         }
     }
 
-    void goToGoToGrounded()
+    IEnumerator ragdollReset()
     {
-        cC.goToGrounded();
+        Debug.Log("bing");
+        yield return new WaitForSeconds(3);
+        if (rb.velocity.magnitude < 1)
+        {
+            cC.goToGrounded();
+            Debug.Log("bong");
+            cC.gameObject.transform.SetParent(null);
+            cC.gameObject.transform.position = myHips.transform.position;
+            Destroy(gameObject);
+        }
+        else
+        {
+            StartCoroutine(ragdollReset());
+        }
     }
+
 }

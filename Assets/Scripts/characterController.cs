@@ -31,6 +31,7 @@ public class characterController : MonoBehaviour
     [Header ("Ragdoll Mode Variables")]
     goToThing spinCamGoTo;
     public GameObject myRagdoll;
+    SkinnedMeshRenderer myMeshRenderer;
 
     //debug stuff
     public Text debugText;
@@ -44,6 +45,7 @@ public class characterController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         spinCamGoTo = GameObject.Find("spinnyCam").GetComponent<goToThing>();
+        myMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     private void Update()
@@ -67,6 +69,10 @@ public class characterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             goToRagdoll();
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            intentionallyRagdoll();
         }
 
         if (currentState == playerState.GROUNDED)
@@ -153,8 +159,17 @@ public class characterController : MonoBehaviour
 
     public void goToRagdoll()
     {
+        charInt.hB.beingRidden = false;
         currentState = playerState.RAGDOLL;
         GameObject thaRagdoll = Instantiate(myRagdoll, transform.position, transform.rotation, null);
+        spinCamGoTo.targetToFollow = thaRagdoll.GetComponent<ragdollLaunchScript>().myHips;
+    }
+
+    public void intentionallyRagdoll()
+    {
+        currentState = playerState.RAGDOLL;
+        GameObject thaRagdoll = Instantiate(myRagdoll, transform.position, transform.rotation, null);
+        myRagdoll.GetComponent<ragdollLaunchScript>().willLaunch = false;
         spinCamGoTo.targetToFollow = thaRagdoll.GetComponent<ragdollLaunchScript>().myHips;
     }
 
@@ -171,6 +186,16 @@ public class characterController : MonoBehaviour
         if(currentState != playerState.RIDING && currentState != playerState.TAMING)
         {
             transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+        }
+
+        if(currentState == playerState.RAGDOLL)
+        {
+            myMeshRenderer.enabled = false;
+        }
+        else
+        {
+            myMeshRenderer.enabled = true;
+            spinCamGoTo.targetToFollow = gameObject;
         }
     }
 }

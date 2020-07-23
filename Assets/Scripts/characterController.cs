@@ -70,10 +70,6 @@ public class characterController : MonoBehaviour
         {
             goToRagdoll();
         }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            intentionallyRagdoll();
-        }
 
         if (currentState == playerState.GROUNDED)
         {
@@ -165,20 +161,15 @@ public class characterController : MonoBehaviour
         spinCamGoTo.targetToFollow = thaRagdoll.GetComponent<ragdollLaunchScript>().myHips;
     }
 
-    public void intentionallyRagdoll()
-    {
-        currentState = playerState.RAGDOLL;
-        GameObject thaRagdoll = Instantiate(myRagdoll, transform.position, transform.rotation, null);
-        myRagdoll.GetComponent<ragdollLaunchScript>().willLaunch = false;
-        spinCamGoTo.targetToFollow = thaRagdoll.GetComponent<ragdollLaunchScript>().myHips;
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
         //movement and camera
 
         cam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * camSensitivityY, 0, 0));
+
+
+
         if (isMoving && currentState == playerState.GROUNDED)
         {
             transform.Translate(movement * moveSpeed * Time.deltaTime);
@@ -188,13 +179,18 @@ public class characterController : MonoBehaviour
             transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
         }
 
-        if(currentState == playerState.RAGDOLL)
+        if (currentState == playerState.RIDING)
+        {
+            myMeshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
+        }
+        if (currentState == playerState.RAGDOLL)
         {
             myMeshRenderer.enabled = false;
         }
-        else
+        if(currentState == playerState.GROUNDED)
         {
             myMeshRenderer.enabled = true;
+            myMeshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             spinCamGoTo.targetToFollow = gameObject;
         }
     }

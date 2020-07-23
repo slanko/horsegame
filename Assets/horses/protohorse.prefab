@@ -404,8 +404,11 @@ MonoBehaviour:
   camSensitivityX: 2
   horseName: lovely horse
   myRideAnchor: {fileID: 0}
+  thingILike: 0
   tamingGoal: 100
   timerDecrease: 50
+  happyTamingGoal: 75
+  happyTimerDecrease: 35
 --- !u!114 &5988409510827236636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +472,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &1214603778
 BoxCollider:

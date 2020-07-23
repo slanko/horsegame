@@ -15,7 +15,9 @@ public class horseBehaviour : MonoBehaviour
     godScript GOD;
     characterController cC;
     [Header("Taming Stuff")]
-    public float tamingGoal, timerDecrease;
+    public throwablesScript.throwableTypes thingILike;
+    public float tamingGoal;
+    public float timerDecrease, happyTamingGoal, happyTimerDecrease;
     horseFunctionsScript hFS;
 
     //horse riding movement stuff
@@ -83,6 +85,7 @@ public class horseBehaviour : MonoBehaviour
         if(GOD.tamingSlider.value <= GOD.tamingSlider.minValue)
         {
             cC.goToRagdoll();
+            changePosition();
         }
     }
 
@@ -102,6 +105,21 @@ public class horseBehaviour : MonoBehaviour
         {
             transform.Translate(movement * moveSpeed * Time.deltaTime);
             transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+        }
+    }
+
+    //throwable interaction
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "throwable")
+        {
+            var otherTS = other.gameObject.GetComponent<throwablesScript>();
+            if(otherTS.myType == thingILike)
+            {
+                tamingGoal = happyTamingGoal;
+                timerDecrease = happyTimerDecrease;
+                Destroy(other.gameObject);
+            }
         }
     }
 }

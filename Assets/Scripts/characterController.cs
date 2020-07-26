@@ -150,6 +150,7 @@ public class characterController : MonoBehaviour
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         myCap.enabled = true;
         transform.SetParent(null);
+        transform.localScale = new Vector3(1, 1, 1);
         currentState = playerState.GROUNDED;
     }
 

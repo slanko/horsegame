@@ -5,15 +5,19 @@ using UnityEngine.AI;
 
 public class horseBehaviour : MonoBehaviour
 {
-    Animator anim;
+    [Tooltip("This HAS to be a prefab, don't fuck it up"), Header("List Prefab (MUST be a prefab)")]
+    public GameObject myPrefab;
+    public Animator anim;
     NavMeshAgent nav;
     Vector3 navPos;
+    [Header("Everything else")]
+    public string horseName;
     public bool isTamed, beingRidden;
     public float moveWaitTimeMin, moveWaitTimeMax, moveDistanceMin, moveDistanceMax, moveSpeed, camSensitivityX;
-    public string horseName;
     public Transform myRideAnchor;
     godScript GOD;
     characterController cC;
+    Rigidbody rb;
     [Header("Taming Stuff")]
     public throwablesScript.throwableTypes thingILike;
     public float tamingGoal;
@@ -25,6 +29,10 @@ public class horseBehaviour : MonoBehaviour
     bool isMoving;
     Vector3 movement;
 
+    //funny velocity stuff
+    Vector3 oldPosition, newPosition;
+    public float funnyVelocity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +42,7 @@ public class horseBehaviour : MonoBehaviour
         cC = GameObject.Find("Player").GetComponent<characterController>();
         nav = GetComponent<NavMeshAgent>();
         hFS = GetComponent<horseFunctionsScript>();
+        rb = GetComponent<Rigidbody>();
         if(hFS == null)
         {
             hFS = new horseFunctionsScript();
@@ -58,8 +67,20 @@ public class horseBehaviour : MonoBehaviour
         }
         else
         {
-            nav.enabled = true;
+            if(isTamed == false)
+            {
+                nav.enabled = true;
+            }
         }
+
+
+        //funny velocity stuff
+        figureOutVelocity();
+        if (funnyVelocity < 0)
+        {
+            funnyVelocity = funnyVelocity * -1;
+        }
+        anim.SetFloat("walkies", funnyVelocity / 3.5f);
 
         //probably could do this cleaner with the functions but i'm just getting it working
         if (cC.currentState == characterController.playerState.TAMING)
@@ -121,5 +142,18 @@ public class horseBehaviour : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+    }
+
+    //keep an eye on this one it's shifty
+    void figureOutVelocity()
+    {
+        newPosition = transform.position;
+        funnyVelocity = (newPosition - oldPosition).magnitude / Time.deltaTime;
+        oldPosition = transform.position;
+    }
+
+    void killMe()
+    {
+        Destroy(gameObject);
     }
 }

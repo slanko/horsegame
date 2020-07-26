@@ -394,6 +394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24f824e9b7a4fe419f4e811415346fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPrefab: {fileID: 7928745845243787427}
+  horseName: lovely horse
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1
@@ -402,13 +404,13 @@ MonoBehaviour:
   moveDistanceMax: 20
   moveSpeed: 6
   camSensitivityX: 2
-  horseName: lovely horse
   myRideAnchor: {fileID: 0}
   thingILike: 0
   tamingGoal: 100
   timerDecrease: 50
   happyTamingGoal: 75
   happyTimerDecrease: 35
+  funnyVelocity: 0
 --- !u!114 &5988409510827236636
 MonoBehaviour:
   m_ObjectHideFlags: 0

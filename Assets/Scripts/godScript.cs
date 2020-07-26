@@ -11,6 +11,8 @@ public class godScript : MonoBehaviour
     public GameObject tamingSliderParent;
     public KeyCode tameKey;
 
+    public List<GameObject> horseList;
+
     // Start is called before the first frame update
     void Start()
     {

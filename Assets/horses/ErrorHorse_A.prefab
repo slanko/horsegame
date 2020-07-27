@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5732696451329176536}
   - component: {fileID: 7604812617642023037}
   - component: {fileID: 6456900559988202115}
-  - component: {fileID: 4680824618772167843}
+  - component: {fileID: 1664109106616944775}
   m_Layer: 8
   m_Name: ErrorHorse_A
   m_TagString: horse
@@ -140,7 +140,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
   m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
---- !u!95 &4680824618772167843
+--- !u!95 &1664109106616944775
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

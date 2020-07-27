@@ -7,6 +7,7 @@ TagManager:
   - horse
   - throwable
   - ground
+  - ragdollCatcher
   layers:
   - Default
   - TransparentFX

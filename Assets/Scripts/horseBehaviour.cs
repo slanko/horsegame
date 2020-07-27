@@ -7,10 +7,11 @@ public class horseBehaviour : MonoBehaviour
 {
     [Tooltip("This HAS to be a prefab, don't fuck it up"), Header("List Prefab (MUST be a prefab)")]
     public GameObject myPrefab;
-    public Animator anim;
+
     NavMeshAgent nav;
     Vector3 navPos;
     [Header("Everything else")]
+    public Animator anim;
     public string horseName;
     public bool isTamed, beingRidden;
     public float moveWaitTimeMin, moveWaitTimeMax, moveDistanceMin, moveDistanceMax, moveSpeed, camSensitivityX;
@@ -59,6 +60,7 @@ public class horseBehaviour : MonoBehaviour
             if (isTamed)
             {
                 horseRidingUpdate();
+                anim.SetBool("isTamed", true);
             }
             else
             {
@@ -106,6 +108,7 @@ public class horseBehaviour : MonoBehaviour
         if(GOD.tamingSlider.value <= GOD.tamingSlider.minValue)
         {
             cC.goToRagdoll();
+            anim.SetTrigger("buck");
             changePosition();
         }
     }

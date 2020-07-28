@@ -18,6 +18,7 @@ public class characterInteract : MonoBehaviour
     public Image throwableUI;
     public Sprite nadaSprite;
     public GameObject throwPoint;
+    public Animator uiAnim;
 
     public List<GameObject> heldThrowables;
     // Start is called before the first frame update
@@ -79,11 +80,7 @@ public class characterInteract : MonoBehaviour
         {
             if (Input.GetKeyDown(cC.throwKey))
             {
-                heldThrowables[0].transform.position = throwPoint.transform.position;
-                heldThrowables[0].transform.rotation = throwPoint.transform.rotation;
-                heldThrowables[0].SetActive(true);
-                heldThrowables[0].GetComponent<Rigidbody>().AddForce(throwPoint.transform.forward * 20, ForceMode.Impulse);
-                heldThrowables.Remove(heldThrowables[0]);
+                uiAnim.SetTrigger("Throw");
             }
             //set UI image
             throwableUI.sprite = heldThrowables[0].GetComponent<throwablesScript>().myImage;
@@ -92,6 +89,13 @@ public class characterInteract : MonoBehaviour
         {
             throwableUI.sprite = nadaSprite;
         }
-
+    }
+    public void actuallyThrow()
+    {
+        heldThrowables[0].transform.position = throwPoint.transform.position;
+        heldThrowables[0].transform.rotation = throwPoint.transform.rotation;
+        heldThrowables[0].SetActive(true);
+        heldThrowables[0].GetComponent<Rigidbody>().AddForce(throwPoint.transform.forward * 20, ForceMode.Impulse);
+        heldThrowables.Remove(heldThrowables[0]);
     }
 }

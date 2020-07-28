@@ -31,7 +31,7 @@ public class characterController : MonoBehaviour
     [Header ("Ragdoll Mode Variables")]
     goToThing spinCamGoTo;
     public GameObject myRagdoll;
-    SkinnedMeshRenderer myMeshRenderer;
+    public SkinnedMeshRenderer myMeshRenderer;
 
     //debug stuff
     public Text debugText;
@@ -45,7 +45,7 @@ public class characterController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         spinCamGoTo = GameObject.Find("spinnyCam").GetComponent<goToThing>();
-        myMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        //myMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     private void Update()

@@ -8,14 +8,11 @@ public class HorseHolder : MonoBehaviour
     [SerializeField] GameObject[] horsePrefabs;
 
 
-
-
     public List<horseBehaviour> horseList = new List<horseBehaviour>();
 
     public void AddHorse(horseBehaviour _hb)
     {
         bool horseExists = false;
-
         foreach (horseBehaviour hb in horseList)
         {
             if(_hb.name == hb.name)

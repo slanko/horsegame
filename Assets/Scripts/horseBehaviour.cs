@@ -5,12 +5,10 @@ using UnityEngine.AI;
 
 public class horseBehaviour : MonoBehaviour
 {
-    [Tooltip("This HAS to be a prefab, don't fuck it up"), Header("List Prefab (MUST be a prefab)")]
-    public GameObject myPrefab;
 
     NavMeshAgent nav;
     Vector3 navPos;
-    [Header("Everything else")]
+    [Header("Everything")]
     public Animator anim;
     public string horseName;
     public bool isTamed, beingRidden;

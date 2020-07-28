@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
+public struct horseStruct
+{
+    public string horseName;
+    public GameObject prefab;
+    public bool logged;
+}
 public class horseListScript : MonoBehaviour
 {
-
+    public horseStruct[] masterHorseList;
     godScript GOD;
     bool horseDetected;
     horseBehaviour hB;
@@ -26,8 +32,21 @@ public class horseListScript : MonoBehaviour
     {
         if(horseDetected == true)
         {
-            GOD.horseList.Add(hB.myPrefab);
-            hB.anim.SetTrigger("whee");
+            bool itsME = false;
+            for(int i = 0; i < masterHorseList.Length; i++)
+            {
+                horseStruct horsey = masterHorseList[i];
+                if(horsey.horseName == hB.horseName)
+                {
+                    itsME = true;
+                    masterHorseList[i].logged = true;
+                }
+            }
+            if(itsME == true)
+            {
+
+                hB.anim.SetTrigger("whee");
+            }
         }
     }
 
@@ -50,5 +69,4 @@ public class horseListScript : MonoBehaviour
                 horseDetected = false;
         }
     }
-
 }

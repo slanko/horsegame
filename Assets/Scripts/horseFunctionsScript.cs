@@ -9,11 +9,12 @@ public class horseFunctionsScript : MonoBehaviour
     public Vector2 tamingEventTimeBounds;
     bool tameAbilityTriggered;
     public characterController cC;
+    horseBehaviour hB;
     // Start is called before the first frame update
     void Start()
     {
         cC = GameObject.Find("Player").GetComponent<characterController>();
-
+        hB = GetComponent<horseBehaviour>();
         if (whileTamingFunction[0] == null)
         {
             whileTamingFunction[0] = new UnityEvent();
@@ -22,8 +23,8 @@ public class horseFunctionsScript : MonoBehaviour
 
     private void Update()
     {
-        if(cC.currentState == characterController.playerState.TAMING)
-        {
+        if(cC.currentState == characterController.playerState.TAMING && hB.beingRidden)
+           {
             if(tameAbilityTriggered == false)
             {
                 whileTamingFunction[0].Invoke();

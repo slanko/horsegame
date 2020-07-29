@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 [System.Serializable]
 public struct horseStruct
 {
@@ -8,6 +9,7 @@ public struct horseStruct
     public GameObject prefab;
     public bool logged;
     public string description;
+    public Sprite bigPicture, smallPicture;
 }
 public class horseListScript : MonoBehaviour
 {

@@ -281,7 +281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 63072669}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 727590558}
+        m_MethodName: DescriptorSwitcher
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 6104e47ae9966bc43afaea94af578a48,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Descriptor, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &63072669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3535,6 +3547,7 @@ GameObject:
   - component: {fileID: 727590556}
   - component: {fileID: 727590555}
   - component: {fileID: 727590557}
+  - component: {fileID: 727590558}
   m_Layer: 5
   m_Name: Horse/Apple descriptor
   m_TagString: Untagged
@@ -3614,6 +3627,21 @@ MonoBehaviour:
   descriptor: {fileID: 11400000, guid: 95dc8207b761db64eb71b8066cfc5052, type: 2}
   descriptionText: {fileID: 1909004136}
   picture: {fileID: 566275494}
+--- !u!114 &727590558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727590553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc93805f1720964e850ac0841634bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Panel: {fileID: 727590557}
+  newDescriptor: {fileID: 0}
+  oldDescriptor: {fileID: 0}
 --- !u!1 &732875371
 GameObject:
   m_ObjectHideFlags: 0
@@ -4720,7 +4748,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 953029168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 727590558}
+        m_MethodName: DescriptorSwitcher
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 95dc8207b761db64eb71b8066cfc5052,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: Descriptor, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &953029168
 MonoBehaviour:
   m_ObjectHideFlags: 0

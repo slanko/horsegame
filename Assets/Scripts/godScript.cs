@@ -31,16 +31,16 @@ public class godScript : MonoBehaviour
             }
             tamingSliderParent.SetActive(true);
             tamingSlider.maxValue = charInt.hB.tamingGoal;
-            tamingSlider.value = tamingSlider.value - charInt.hB.timerDecrease * Time.deltaTime;
             if (Input.GetKeyDown(tameKey))
             {
                 tamingSlider.value = tamingSlider.value + 10;
             }
             if(tamingSlider.value == tamingSlider.maxValue)
-            {
+                {
                 charInt.hB.isTamed = true;
                 cC.goToRide();
             }
+            tamingSlider.value = tamingSlider.value - charInt.hB.timerDecrease * Time.deltaTime;
         }
         else
         {

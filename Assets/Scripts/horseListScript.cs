@@ -7,6 +7,7 @@ public struct horseStruct
     public string horseName;
     public GameObject prefab;
     public bool logged;
+    public string description;
 }
 public class horseListScript : MonoBehaviour
 {

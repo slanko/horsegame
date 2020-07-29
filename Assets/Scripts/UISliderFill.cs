@@ -15,6 +15,6 @@ public class UISliderFill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        img.fillAmount = sliderBuddy.value / 100;
+        img.fillAmount = sliderBuddy.value / sliderBuddy.maxValue;
     }
 }

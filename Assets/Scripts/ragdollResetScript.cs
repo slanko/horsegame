@@ -7,7 +7,7 @@ public class ragdollResetScript : MonoBehaviour
     {
         if(transform.position.y < -100)
         {
-            transform.position = new Vector3(0, 100, 0);
+            transform.position = new Vector3(0, 200, 0);
         }
     }
 }

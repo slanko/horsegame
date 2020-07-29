@@ -21,7 +21,6 @@ public class ragdollLaunchScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rb.velocity.magnitude);
         if(willLaunch == true)
         {
             if (launched == false)

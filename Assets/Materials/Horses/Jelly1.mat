@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FlameHorseB2
-  m_Shader: {fileID: 4800000, guid: bfeb27d6f314d8e48a3adb08fc292ef2, type: 3}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_Name: Jelly1
+  m_Shader: {fileID: 4800000, guid: 3869b35dfd75d714eaa71ddc7bb28eeb, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -20,8 +20,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Base:
-        m_Texture: {fileID: 2800000, guid: 25a754d697792d644a21d3698c4860e8, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -40,26 +40,22 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 25a754d697792d644a21d3698c4860e8, type: 3}
-        m_Scale: {x: 1, y: 1.2}
-        m_Offset: {x: 0.12, y: 0.15}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 25a754d697792d644a21d3698c4860e8, type: 3}
-        m_Scale: {x: 1, y: 1.2}
-        m_Offset: {x: 0.12, y: 0.15}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 08f97a84c8ad6a545bda15175462670b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
+    - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -68,13 +64,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _ASEOutlineWidth: 0
     - _BumpScale: 1
-    - _ChromaticAberration: 0.1
+    - _ChromaticAberration: 0.125
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.38
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -86,12 +83,22 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 2.34
     - _SrcBlend: 1
+    - _TransAmbient: 0.2
+    - _TransDirect: 1
+    - _TransNormalDistortion: 0.1
+    - _TransScattering: 2
+    - _TransShadow: 0.9
+    - _Translucency: 1
     - _UVSec: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _BaseColour: {r: 0.6415094, g: 0.1968431, b: 0.1785333, a: 1}
-    - _Color: {r: 0.4253738, g: 0.7319368, b: 0.745283, a: 1}
-    - _EmissionColor: {r: 0.49411765, g: 1.4745098, b: 1.3333334, a: 1}
-    - _SpecColor: {r: 0, g: 0.40829423, b: 0.5471698, a: 1}
+    - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+    - _BaseColour: {r: 0.7254902, g: 0.32549018, b: 0.6502251, a: 1}
+    - _Color: {r: 0.3490566, g: 0.16829515, b: 0.08726415, a: 1}
+    - _Color0: {r: 0.7650783, g: 1, b: 0, a: 0.07843138}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Vector0: {r: 0.42, g: 5.22, b: 2, a: 0}
+    - _eggs: {r: 5, g: 1, b: 0, a: 0}

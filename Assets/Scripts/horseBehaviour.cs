@@ -9,19 +9,21 @@ public class horseBehaviour : MonoBehaviour
     NavMeshAgent nav;
     Vector3 navPos;
     [Header("Everything")]
-    public Animator anim;
+    [HideInInspector] public Animator anim;
     public string horseName;
     public bool isTamed, beingRidden;
     public float moveWaitTimeMin, moveWaitTimeMax, moveDistanceMin, moveDistanceMax, moveSpeed, camSensitivityX;
-    public Transform myRideAnchor;
+    [HideInInspector] public Transform myRideAnchor;
     godScript GOD;
     characterController cC;
     Rigidbody rb;
+    [Space(10)]
     [Header("Taming Stuff")]
     public throwablesScript.throwableTypes thingILike;
     public float tamingGoal;
     public float timerDecrease, happyTamingGoal, happyTimerDecrease;
     horseFunctionsScript hFS;
+    public bool imHappy;
 
     //horse riding movement stuff
     float vert, horiz;
@@ -30,7 +32,7 @@ public class horseBehaviour : MonoBehaviour
 
     //funny velocity stuff
     Vector3 oldPosition, newPosition;
-    public float funnyVelocity;
+    [HideInInspector] public float funnyVelocity;
 
     // Start is called before the first frame update
     void Start()
@@ -138,6 +140,7 @@ public class horseBehaviour : MonoBehaviour
             var otherTS = other.gameObject.GetComponent<throwablesScript>();
             if(otherTS.myType == thingILike)
             {
+                imHappy = true;
                 tamingGoal = happyTamingGoal;
                 timerDecrease = happyTimerDecrease;
                 Destroy(other.gameObject);

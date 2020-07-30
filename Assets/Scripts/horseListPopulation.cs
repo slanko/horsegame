@@ -15,14 +15,8 @@ public class horseListPopulation : MonoBehaviour
         foreach(Transform child in transform)
         {
             child.name = i.ToString();
-            child.GetComponentInChildren<Image>().sprite = theList.masterHorseList[i].smallPicture;
+            child.transform.Find("Image").GetComponent<Image>().sprite = theList.masterHorseList[i].smallPicture;
             i++;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

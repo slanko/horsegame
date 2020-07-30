@@ -11,7 +11,8 @@ public class characterController : MonoBehaviour
         JUMPING,
         TAMING,
         RIDING,
-        RAGDOLL
+        RAGDOLL,
+        MENU
     }
     public playerState currentState;
 
@@ -42,8 +43,6 @@ public class characterController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         myCap = GetComponent<CapsuleCollider>();
         charInt = GetComponent<characterInteract>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
         spinCamGoTo = GameObject.Find("spinnyCam").GetComponent<goToThing>();
         //myMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
@@ -94,6 +93,8 @@ public class characterController : MonoBehaviour
 
         //debug thing
         debugText.text = currentState.ToString();
+
+
 
     }
 
@@ -151,6 +152,7 @@ public class characterController : MonoBehaviour
         myCap.enabled = true;
         transform.SetParent(null);
         transform.localScale = new Vector3(1, 1, 1);
+        transform.rotation = new Quaternion(0, transform.rotation.y, 0, 0);
         currentState = playerState.GROUNDED;
     }
 

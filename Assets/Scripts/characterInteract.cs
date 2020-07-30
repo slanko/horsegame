@@ -12,6 +12,7 @@ public class characterInteract : MonoBehaviour
     characterController cC;
     public KeyCode interactKey;
     public horseBehaviour hB;
+    public KeyCode thumbsUpKey;
 
     //throwing stuff
     [Header ("Throwing Stuff")]
@@ -88,6 +89,12 @@ public class characterInteract : MonoBehaviour
         else
         {
             throwableUI.sprite = nadaSprite;
+        }
+
+        //thumbs up
+        if (Input.GetKeyDown(thumbsUpKey))
+        {
+            uiAnim.SetTrigger("thumbsUp");
         }
     }
     public void actuallyThrow()

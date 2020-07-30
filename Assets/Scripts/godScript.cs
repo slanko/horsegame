@@ -26,7 +26,14 @@ public class godScript : MonoBehaviour
         {
             if(cC.enteredTaming == false)
             {
-                tamingSlider.value = charInt.hB.tamingGoal / 4;
+                if(charInt.hB.imHappy == true)
+                {
+                    tamingSlider.value = charInt.hB.tamingGoal / 2;
+                }
+                else
+                {
+                    tamingSlider.value = charInt.hB.tamingGoal / 3;
+                }
                 cC.enteredTaming = true;
             }
             tamingSliderParent.SetActive(true);

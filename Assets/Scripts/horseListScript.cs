@@ -8,6 +8,7 @@ public struct horseStruct
     public string horseName;
     public GameObject prefab;
     public bool logged;
+    [Multiline(4)]
     public string description;
     public Sprite bigPicture, smallPicture;
 }

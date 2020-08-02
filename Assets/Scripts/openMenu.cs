@@ -11,6 +11,8 @@ public class openMenu : MonoBehaviour
     void Start()
     {
         diary.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

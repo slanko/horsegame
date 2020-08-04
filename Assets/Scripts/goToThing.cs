@@ -5,6 +5,7 @@ using UnityEngine;
 public class goToThing : MonoBehaviour
 {
     public GameObject targetToFollow;
+    bool alsoRotation;
 
     // Update is called once per frame
     void Update()

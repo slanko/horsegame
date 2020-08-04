@@ -7,6 +7,7 @@ Shader "Jelly!!"
 		[Header(Refraction)]
 		_ChromaticAberration("Chromatic Aberration", Range( 0 , 0.3)) = 0.1
 		_BaseColour("Base Colour", Color) = (0,0.3867925,0,1)
+		_Vector0("Vector 0", Vector) = (0.42,5.22,2,0)
 		[HideInInspector] _texcoord( "", 2D ) = "white" {}
 		[HideInInspector] __dirty( "", Int ) = 1
 	}
@@ -34,6 +35,7 @@ Shader "Jelly!!"
 		uniform float4 _BaseColour;
 		uniform sampler2D RefractionGrab43;
 		uniform float _ChromaticAberration;
+		uniform float3 _Vector0;
 
 
 		float3 mod3D289( float3 x ) { return x - floor( x / 289.0 ) * 289.0; }
@@ -115,12 +117,9 @@ Shader "Jelly!!"
 		{
 			#ifdef UNITY_PASS_FORWARDBASE
 			float4 temp_output_35_0 = ( float4( 0,0,0,0 ) * _BaseColour );
-			float simplePerlin3D36 = snoise( float3( i.uv_texcoord ,  0.0 ) );
-			float4 temp_output_37_0 = ( temp_output_35_0 * simplePerlin3D36 );
-			float3 desaturateInitialColor40 = temp_output_37_0.rgb;
-			float desaturateDot40 = dot( desaturateInitialColor40, float3( 0.299, 0.587, 0.114 ));
-			float3 desaturateVar40 = lerp( desaturateInitialColor40, desaturateDot40.xxx, temp_output_37_0.r );
-			color.rgb = color.rgb + Refraction( i, o, desaturateVar40.x, _ChromaticAberration ) * ( 1 - color.a );
+			float2 uv_TexCoord34 = i.uv_texcoord * _Vector0.xy + float2( 0.24,1.67 );
+			float simplePerlin3D36 = snoise( float3( uv_TexCoord34 ,  0.0 ) );
+			color.rgb = color.rgb + Refraction( i, o, ( temp_output_35_0 * simplePerlin3D36 ).r, _ChromaticAberration ) * ( 1 - color.a );
 			color.a = 1;
 			#endif
 		}
@@ -128,7 +127,7 @@ Shader "Jelly!!"
 		void surf( Input i , inout SurfaceOutputStandard o )
 		{
 			o.Normal = float3(0,0,1);
-			float4 color50 = IsGammaSpace() ? float4(0.3167242,0.8584906,0.2632165,0) : float4(0.08179453,0.7077566,0.05632854,0);
+			float4 color50 = IsGammaSpace() ? float4(0.3167242,0.8584906,0.2632165,0) : float4(0.08179452,0.7077566,0.05632855,0);
 			float4 blendOpSrc49 = color50;
 			float4 blendOpDest49 = saturate( _BaseColour );
 			o.Metallic = ( saturate( ( 1.0 - ( ( 1.0 - blendOpDest49) / blendOpSrc49) ) )).r;
@@ -229,31 +228,28 @@ Shader "Jelly!!"
 }
 /*ASEBEGIN
 Version=16700
-2162;73;1399;397;3175.242;547.9921;2.59286;True;False
+2175;73;1214;426;3843.765;969.0002;4.587432;True;False
 Node;AmplifyShaderEditor.Vector3Node;42;-1837.38,291.4409;Float;False;Property;_Vector0;Vector 0;4;0;Create;True;0;0;False;0;0.42,5.22,2;0,5.22,2;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.TextureCoordinatesNode;34;-1473.166,300.2336;Float;True;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;2.29,4.04;False;1;FLOAT2;0.24,1.67;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.ColorNode;31;-1459.775,-229.0735;Float;False;Property;_BaseColour;Base Colour;3;0;Create;True;0;0;False;0;0,0.3867925,0,1;0.7372549,0.2548039,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;35;-1040.974,-228.6566;Float;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
 Node;AmplifyShaderEditor.NoiseGeneratorNode;36;-1101.593,199.7807;Float;True;Simplex3D;1;0;FLOAT3;0,0,0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.ColorNode;50;-1037.955,-696.2764;Float;False;Constant;_Color0;Color 0;8;0;Create;True;0;0;False;0;0.3167242,0.8584906,0.2632165,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;37;-826.3444,10.14869;Float;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.SaturateNode;44;-1120.027,-483.7138;Float;True;1;0;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.DesaturateOpNode;40;-618.3044,30.71416;Float;True;2;0;FLOAT3;0,0,0;False;1;FLOAT;0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;37;-826.3444,10.14869;Float;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
 Node;AmplifyShaderEditor.BlendOpsNode;49;-569.3036,-294.7748;Float;False;ColorBurn;True;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.StandardSurfaceOutputNode;46;-193.8427,-255.2263;Float;False;True;2;Float;ASEMaterialInspector;0;0;Standard;Jelly!!;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;True;0;False;TransparentCutout;;Transparent;ForwardOnly;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;2;5;False;-1;10;False;-1;4;1;False;-1;1;False;-1;1;False;-1;0;False;-1;43;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;0;-1;1;-1;0;True;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.3;False;-1;0;False;-1;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;46;-193.8427,-255.2263;Float;False;True;2;Float;ASEMaterialInspector;0;0;Standard;Jelly!!;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Custom;0.5;True;True;0;True;TransparentCutout;;Transparent;ForwardOnly;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;2;5;False;-1;10;False;-1;4;1;False;-1;1;False;-1;1;False;-1;0;False;-1;43;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;;0;-1;1;-1;0;True;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.3;False;-1;0;False;-1;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
 WireConnection;34;0;42;0
 WireConnection;35;1;31;0
 WireConnection;36;0;34;0
+WireConnection;44;0;31;0
 WireConnection;37;0;35;0
 WireConnection;37;1;36;0
-WireConnection;44;0;31;0
-WireConnection;40;0;37;0
-WireConnection;40;1;37;0
 WireConnection;49;0;50;0
 WireConnection;49;1;44;0
 WireConnection;46;3;49;0
 WireConnection;46;4;35;0
-WireConnection;46;8;40;0
+WireConnection;46;8;37;0
 WireConnection;46;9;35;0
 ASEEND*/
-//CHKSM=BC62F0AB621BF7F08B67AC01D4363FD6E9487654
+//CHKSM=A5869C806881AD9F5FCEE1FEDC0C22B4A02223A0

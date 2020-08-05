@@ -5,11 +5,15 @@ using UnityEngine;
 public class goToThing : MonoBehaviour
 {
     public GameObject targetToFollow;
-    bool alsoRotation;
+    public bool alsoRotation;
 
     // Update is called once per frame
     void Update()
     {
         transform.position = targetToFollow.transform.position;
+        if(alsoRotation == true)
+        {
+            transform.rotation = targetToFollow.transform.rotation;
+        }
     }
 }

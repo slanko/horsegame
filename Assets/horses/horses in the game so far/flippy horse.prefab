@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a2dc264c53b03f4980c7f07470083e0, type: 2}
+  - {fileID: 2100000, guid: 376aad361ecab52479f5b4240ebabc84, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,7 +125,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039501318535982979}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.43, y: 0.074, z: 13.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -145,7 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24f824e9b7a4fe419f4e811415346fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 1039501318535982979}
   anim: {fileID: 0}
   horseName: flippy horse
   isTamed: 0
@@ -158,10 +157,11 @@ MonoBehaviour:
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
+  tamingGoal: 200
   timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  happyTamingGoal: 90
+  happyTimerDecrease: 30
+  imHappy: 0
   funnyVelocity: 0
 --- !u!114 &3710550611919538748
 MonoBehaviour:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75bad96e836d1e438adae2d363abb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeAmount: 0
+  changeAmount: -35
 --- !u!195 &6946130245096994527
 NavMeshAgent:
   m_ObjectHideFlags: 0

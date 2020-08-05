@@ -394,23 +394,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24f824e9b7a4fe419f4e811415346fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myPrefab: {fileID: 0}
   anim: {fileID: 0}
-  horseName: 
+  horseName: lovely horse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 0
-  moveWaitTimeMax: 0
-  moveDistanceMin: 0
-  moveDistanceMax: 0
-  moveSpeed: 0
-  camSensitivityX: 0
+  moveWaitTimeMin: 1
+  moveWaitTimeMax: 5
+  moveDistanceMin: 5
+  moveDistanceMax: 20
+  moveSpeed: 6
+  camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 0
-  timerDecrease: 0
-  happyTamingGoal: 0
-  happyTimerDecrease: 0
+  tamingGoal: 100
+  timerDecrease: 50
+  happyTamingGoal: 75
+  happyTimerDecrease: 35
+  imHappy: 0
   funnyVelocity: 0
 --- !u!114 &5988409510827236636
 MonoBehaviour:
@@ -424,7 +424,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 990f99cb65eb33345b78efc8d63d9b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whileTamingFunction: []
+  whileTamingFunction:
+  - m_PersistentCalls:
+      m_Calls: []
   tamingEventTimeBounds: {x: 0, y: 0}
   cC: {fileID: 0}
 --- !u!195 &1214603775

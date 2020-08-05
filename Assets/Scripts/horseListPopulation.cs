@@ -16,7 +16,7 @@ public class horseListPopulation : MonoBehaviour
     }
 
 
-    void populateList()
+    public void populateList()
     {
         int i = 0;
         foreach (Transform child in transform)

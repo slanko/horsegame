@@ -18,6 +18,8 @@ public class horseListScript : MonoBehaviour
     godScript GOD;
     bool horseDetected;
     horseBehaviour hB;
+    public horseListPopulation hLP;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,7 @@ public class horseListScript : MonoBehaviour
                 hB.anim.SetTrigger("whee");
             }
         }
+        hLP.populateList();
     }
 
     private void OnTriggerStay(Collider other)

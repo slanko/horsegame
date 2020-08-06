@@ -5451,23 +5451,30 @@ MonoBehaviour:
       type: 3}
     logged: 0
     description: it's a... "hare-se"???
-    bigPicture: {fileID: 21300000, guid: de6c06d1f4be3da46afe6c29c2c7cf8d, type: 3}
-    smallPicture: {fileID: 21300000, guid: 0050a1604c0b8e440a78b627f09ac67e, type: 3}
+    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
+    smallPicture: {fileID: 21300000, guid: 97c96ec169cd87441b87ed960b043544, type: 3}
   - horseName: upright horse
     prefab: {fileID: 2678365691364677382, guid: 870c59e8c344cad49ab88ee7bde862c1,
       type: 3}
     logged: 0
     description: are you a man??? or a mouse??????
-    bigPicture: {fileID: 21300000, guid: de6c06d1f4be3da46afe6c29c2c7cf8d, type: 3}
-    smallPicture: {fileID: 21300000, guid: 0050a1604c0b8e440a78b627f09ac67e, type: 3}
+    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
+    smallPicture: {fileID: 21300000, guid: c9d051d04fe1b1043894803801a30dfd, type: 3}
   - horseName: scoliosis horse
     prefab: {fileID: 4646193215611802797, guid: 86b4905b7efa6064ab554f284f61fabd,
       type: 3}
     logged: 0
     description: everybody talks about the straw that broke the camel's back.... but
       what about the horse's???
-    bigPicture: {fileID: 21300000, guid: de6c06d1f4be3da46afe6c29c2c7cf8d, type: 3}
-    smallPicture: {fileID: 21300000, guid: 0050a1604c0b8e440a78b627f09ac67e, type: 3}
+    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
+    smallPicture: {fileID: 21300000, guid: a60bbdb9c41d52e48ba0defcf8d3d0c0, type: 3}
+  - horseName: six legged horse
+    prefab: {fileID: 3688344959415695192, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+      type: 3}
+    logged: 0
+    description: the one that started it all
+    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
+    smallPicture: {fileID: 21300000, guid: 65eff370b3671454bbdc25fe1b2fa87d, type: 3}
   hLP: {fileID: 879292344}
 --- !u!1 &1912700971 stripped
 GameObject:
@@ -7318,6 +7325,80 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &4703172375583310701
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3688344959415695192, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_Name
+      value: six legged horse
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.435
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 393216050004870475, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2286871190280417650, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d34c18b0eec65d8458a88eb99eec309d, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d0f1d31a6c9f9f44bba9b744dfa947e1, type: 3}
 --- !u!1 &4773740682386194967
 GameObject:
   m_ObjectHideFlags: 0

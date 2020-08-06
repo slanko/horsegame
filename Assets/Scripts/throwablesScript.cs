@@ -9,7 +9,8 @@ public class throwablesScript : MonoBehaviour
     public enum throwableTypes
     {
         APPLE,
-        NOTAPPLE
+        CARROT,
+        PILL
     }
     public throwableTypes myType;
     public string myName;

@@ -49,6 +49,7 @@ public class horseBehaviour : MonoBehaviour
             hFS = new horseFunctionsScript();
         }
         changePosition();
+        nav.speed = moveSpeed;
     }
 
     // Update is called once per frame

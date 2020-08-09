@@ -34,6 +34,9 @@ public class characterController : MonoBehaviour
     public GameObject myRagdoll;
     public SkinnedMeshRenderer myMeshRenderer;
 
+    //camera stuff
+    public float camMinX, camMaxX, camCurrentX;
+
     //debug stuff
     public Text debugText;
 
@@ -93,8 +96,22 @@ public class characterController : MonoBehaviour
 
         //debug thing
         debugText.text = currentState.ToString();
+        //cam stuff
 
+        var cameraAngle = cam.transform.rotation.eulerAngles;
+        camCurrentX += Input.GetAxis("Mouse Y") * camSensitivityY;
+        camCurrentX = Mathf.Clamp(camCurrentX, camMinX, camMaxX);
+        cameraAngle.x = camCurrentX;
+        cam.transform.rotation = Quaternion.Euler(cameraAngle);
 
+        if (isMoving && currentState == playerState.GROUNDED)
+        {
+            transform.Translate(movement * moveSpeed * Time.deltaTime);
+        }
+        if (currentState != playerState.RIDING && currentState != playerState.TAMING)
+        {
+            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+        }
 
     }
 
@@ -169,18 +186,7 @@ public class characterController : MonoBehaviour
     {
         //movement and camera
 
-        cam.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * camSensitivityY, 0, 0));
 
-
-
-        if (isMoving && currentState == playerState.GROUNDED)
-        {
-            transform.Translate(movement * moveSpeed * Time.deltaTime);
-        }
-        if(currentState != playerState.RIDING && currentState != playerState.TAMING)
-        {
-            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
-        }
 
         if (currentState == playerState.RIDING)
         {

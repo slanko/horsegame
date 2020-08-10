@@ -12,7 +12,6 @@ public class openMenu : MonoBehaviour
     {
         diary.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -24,14 +23,17 @@ public class openMenu : MonoBehaviour
             {
                 diary.SetActive(false);
                 Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
             }
             else
             {
                 diary.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
             }
         }   
+    }
+
+    public void openTheMenu()
+    {
+
     }
 }

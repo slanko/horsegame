@@ -185,9 +185,6 @@ public class characterController : MonoBehaviour
     void FixedUpdate()
     {
         //movement and camera
-
-
-
         if (currentState == playerState.RIDING)
         {
             myMeshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;

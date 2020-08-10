@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  horseName: scoliosis horse
+  horseName: very crooked horse
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 0

@@ -5,35 +5,27 @@ using UnityEngine;
 public class openMenu : MonoBehaviour
 {
     public GameObject diary;
-    public KeyCode menuKey;
     bool menuUp;
+    public string boardName;
+    public GameObject myPipe;
+    horseListScript hLS;
     // Start is called before the first frame update
     void Start()
     {
         diary.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        hLS = GameObject.Find("GOD").GetComponent<horseListScript>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(menuKey))
-        {
-            if(diary.activeSelf == true)
-            {
-                diary.SetActive(false);
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-            else
-            {
-                diary.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-            }
-        }   
-    }
-
     public void openTheMenu()
     {
+        diary.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        hLS.currentPipe = myPipe;
+    }
 
+    public void closeTheMenu()
+    {
+        diary.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

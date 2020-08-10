@@ -16,22 +16,16 @@ public class horseListScript : MonoBehaviour
 {
     public horseStruct[] masterHorseList;
     godScript GOD;
-    bool horseDetected;
+    public bool horseDetected;
     horseBehaviour hB;
     public horseListPopulation hLP;
+    public int currentHorseSelected = 0;
+    public GameObject currentPipe;
 
     // Start is called before the first frame update
     void Start()
     {
         GOD = GameObject.Find("GOD").GetComponent<godScript>();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            AddToHorseList();
-        }
     }
 
     public void AddToHorseList()
@@ -55,6 +49,12 @@ public class horseListScript : MonoBehaviour
             }
         }
         hLP.populateList();
+    }
+
+    public void summonHorse()
+    {
+        var newHorse = Instantiate(masterHorseList[currentHorseSelected].prefab, currentPipe.transform.position, new Quaternion(0, 0, 0, 0));
+        newHorse.GetComponent<horseBehaviour>().isTamed = true;
     }
 
     private void OnTriggerStay(Collider other)

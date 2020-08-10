@@ -8,6 +8,8 @@ TagManager:
   - throwable
   - ground
   - ragdollCatcher
+  - horseBoard
+  - horseLoggerInteract
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - throwables
   - worldUI
   - funnyUI
-  - 
+  - interactables
   - 
   - 
   - 

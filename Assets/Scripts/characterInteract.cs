@@ -66,12 +66,33 @@ public class characterInteract : MonoBehaviour
                         rayHit.collider.gameObject.SetActive(false);
                     }
                 }
+                if(rayHit.collider.gameObject.tag == "horseBoard")
+                {
+                    var oM = rayHit.collider.gameObject.GetComponent<openMenu>();
+                    targetName.text = oM.boardName;
+                    if (Input.GetKeyDown(interactKey))
+                    {
+                        oM.openTheMenu();
+                    }
+
+                }
+                if(rayHit.collider.gameObject.tag == "horseLoggerInteract")
+                {
+                    targetName.text = "ya";
+                    var hLS = GameObject.Find("GOD").GetComponent<horseListScript>();
+                    if (Input.GetKeyDown(interactKey))
+                    {
+                        hLS.AddToHorseList();
+                    }
+                }
+
             }
             else
             {
                 targetName.text = "";
             }
         }
+
         else
         {
             targetName.text = "";

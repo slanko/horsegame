@@ -10,7 +10,8 @@ public class throwablesScript : MonoBehaviour
     {
         APPLE,
         CARROT,
-        PILL
+        PILL,
+        OILBARREL
     }
     public throwableTypes myType;
     public string myName;

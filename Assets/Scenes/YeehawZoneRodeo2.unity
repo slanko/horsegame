@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -72,7 +72,7 @@ LightmapSettings:
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
-    m_BakeBackend: 2
+    m_BakeBackend: 1
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
@@ -1901,7 +1901,7 @@ Light:
   m_BounceIntensity: 9
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.942002e-29, y: 0, z: 0, w: 3.4e-44}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7588,7 +7588,7 @@ PrefabInstance:
     - target: {fileID: 3014858960253446887, guid: a0793ef0ce4b59946b04d38a2dda43c0,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014858960253446895, guid: a0793ef0ce4b59946b04d38a2dda43c0,
         type: 3}
@@ -7644,6 +7644,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: tamingGoal
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: timerDecrease
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: happyTamingGoal
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: happyTimerDecrease
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: moveDistanceMin
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: moveWaitTimeMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014858960253446888, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+        type: 3}
+      propertyPath: moveDistanceMax
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0793ef0ce4b59946b04d38a2dda43c0, type: 3}
@@ -12576,7 +12616,7 @@ PrefabInstance:
     - target: {fileID: 8083094197387612920, guid: e0f891ccda3783a48adecef25e4367dd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f891ccda3783a48adecef25e4367dd, type: 3}

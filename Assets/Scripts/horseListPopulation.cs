@@ -21,6 +21,10 @@ public class horseListPopulation : MonoBehaviour
         int i = 0;
         foreach (Transform child in transform)
         {
+            if(PlayerPrefs.GetInt("horse" + i) == 1)
+            {
+                theList.masterHorseList[i].logged = true;
+            }
             if(theList.masterHorseList[i].logged == true)
             {
                 child.name = i.ToString();

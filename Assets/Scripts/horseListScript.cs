@@ -26,6 +26,7 @@ public class horseListScript : MonoBehaviour
     void Start()
     {
         GOD = GameObject.Find("GOD").GetComponent<godScript>();
+
     }
 
     public void AddToHorseList()
@@ -40,6 +41,8 @@ public class horseListScript : MonoBehaviour
                 {
                     itsME = true;
                     masterHorseList[i].logged = true;
+                    PlayerPrefs.SetInt("horse" + i, 1);
+                    Debug.Log("horse" + i + " = " + PlayerPrefs.GetInt("horse" + i));
                 }
             }
             if(itsME == true)

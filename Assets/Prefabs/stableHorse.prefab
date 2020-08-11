@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2874bcb771593fc4f90bdbd38cd2ecdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialHorse: 0
   anim: {fileID: 3056412013222759260}
   anim2: {fileID: 3056412012064207455}
   myText: {fileID: 3056412013433878592}

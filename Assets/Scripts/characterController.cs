@@ -170,6 +170,7 @@ public class characterController : MonoBehaviour
         transform.SetParent(null);
         transform.localScale = new Vector3(1, 1, 1);
         transform.rotation = new Quaternion(0, transform.rotation.y, 0, 0);
+        cam.transform.rotation = new Quaternion(0, 0, 0, 0);
         currentState = playerState.GROUNDED;
     }
 

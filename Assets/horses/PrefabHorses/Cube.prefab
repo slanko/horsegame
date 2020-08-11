@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Cubey Calvin
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
+  moveWaitTimeMin: 5
   moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveDistanceMin: 15
+  moveDistanceMax: 15
+  moveSpeed: 5
+  camSensitivityX: 5
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 55
+  timerDecrease: 15
+  happyTamingGoal: 25
+  happyTimerDecrease: 5
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &1219603749522239981
@@ -95,8 +95,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 5
+  m_Acceleration: 5
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0

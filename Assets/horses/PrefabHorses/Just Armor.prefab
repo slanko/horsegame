@@ -169,15 +169,15 @@ MonoBehaviour:
   beingRidden: 0
   moveWaitTimeMin: 1
   moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveDistanceMin: 10
+  moveDistanceMax: 25
+  moveSpeed: 5
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
+  tamingGoal: 140
+  timerDecrease: 25
+  happyTamingGoal: 100
   happyTimerDecrease: 35
   imHappy: 0
   funnyVelocity: 0

@@ -115,18 +115,18 @@ MonoBehaviour:
   horseName: Double Ended Horse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 0
+  moveWaitTimeMax: 0.2
+  moveDistanceMin: 4
+  moveDistanceMax: 4
+  moveSpeed: 14
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 150
+  timerDecrease: 35
+  happyTamingGoal: 50
+  happyTimerDecrease: 15
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &2521066706462452738

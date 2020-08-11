@@ -211,13 +211,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9144430659069177047}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.18827748, y: -0, z: -0, w: 0.98211586}
+  m_LocalPosition: {x: 0, y: 22.700003, z: -4.3000007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9144430659890602338}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.705002, y: 0, z: 0}
 --- !u!1 &9144430659094710562
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,17 +272,17 @@ MonoBehaviour:
   horseName: BUFF MAN
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 4
+  moveWaitTimeMax: 4
+  moveDistanceMin: 35
+  moveDistanceMax: 60
+  moveSpeed: 7
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
+  tamingGoal: 700
+  timerDecrease: 95
+  happyTamingGoal: 350
   happyTimerDecrease: 35
   imHappy: 0
   funnyVelocity: 0
@@ -313,8 +313,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 7
+  m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0

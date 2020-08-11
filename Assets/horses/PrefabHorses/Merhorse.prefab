@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Merhorse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 4
+  moveDistanceMin: 12
+  moveDistanceMax: 12
+  moveSpeed: 3
+  camSensitivityX: 6
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 300
+  timerDecrease: 90
+  happyTamingGoal: 160
+  happyTimerDecrease: 55
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &3466864564517802264
@@ -192,7 +192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3466864564596951991}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: 7, z: -6.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3466864564757577550}

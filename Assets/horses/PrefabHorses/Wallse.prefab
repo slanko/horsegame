@@ -86,13 +86,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126346952662463771}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 3.7000012, z: -0.5999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1126346951180663244}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1126346952698298054
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,17 +148,17 @@ MonoBehaviour:
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMax: 1
+  moveDistanceMin: 70
+  moveDistanceMax: 70
+  moveSpeed: 10
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 250
+  timerDecrease: 75
+  happyTamingGoal: 125
+  happyTimerDecrease: 50
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &1126346952698298076
@@ -188,7 +188,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

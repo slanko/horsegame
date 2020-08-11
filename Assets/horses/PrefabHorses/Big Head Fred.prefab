@@ -116,17 +116,17 @@ MonoBehaviour:
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMax: 3
+  moveDistanceMin: 15
+  moveDistanceMax: 21
+  moveSpeed: 7
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
+  tamingGoal: 140
   timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  happyTamingGoal: 95
+  happyTimerDecrease: 40
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &3014858960253446889
@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7630224273232870134, guid: fcced743f2475ac47a38e51ee3f192f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e6b1c058a5a76c43bf7b85b86a8797c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcced743f2475ac47a38e51ee3f192f9, type: 3}
 --- !u!4 &2952901281060150818 stripped

@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872862488550952606}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.2, z: 0}
+  m_LocalRotation: {x: -0.19012725, y: -0, z: -0, w: 0.9817595}
+  m_LocalPosition: {x: 0, y: -2.2000003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5185936402599857177}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.920002, y: 0, z: 0}
 --- !u!1 &3231090621560329425
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,9 +308,9 @@ MonoBehaviour:
   beingRidden: 0
   moveWaitTimeMin: 0.1
   moveWaitTimeMax: 0.3
-  moveDistanceMin: 7
+  moveDistanceMin: 20
   moveDistanceMax: 30
-  moveSpeed: 8
+  moveSpeed: 9
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
@@ -347,7 +347,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 9
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -386,8 +386,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2907762, y: 0.78690124, z: 0.7860539}
-  m_Center: {x: 0, y: 1.4996339, z: 0.7326225}
+  m_Size: {x: 0.2907762, y: 0.5252805, z: 0.97342134}
+  m_Center: {x: 0, y: 0.76487184, z: 0.8263062}
 --- !u!65 &1872862489373996855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -399,8 +399,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
-  m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
+  m_Size: {x: 1.8509827, y: 1.9575958, z: 1.4128274}
+  m_Center: {x: 0.04109192, y: 0.7168803, z: -0.0047225356}
 --- !u!95 &1872862489373996234
 Animator:
   serializedVersion: 3

@@ -289,7 +289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992292306978641853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: -5.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1992292307821479585}
@@ -308,7 +308,6 @@ GameObject:
   - component: {fileID: 1992292307416563128}
   - component: {fileID: 1992292307416563135}
   - component: {fileID: 1992292307416563134}
-  - component: {fileID: 1992292307416563133}
   - component: {fileID: 1992292307416563132}
   - component: {fileID: 1992292307416563123}
   m_Layer: 8
@@ -351,16 +350,16 @@ MonoBehaviour:
   beingRidden: 0
   moveWaitTimeMin: 1
   moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveDistanceMin: 8
+  moveDistanceMax: 12
+  moveSpeed: 2
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 75
+  timerDecrease: 45
+  happyTamingGoal: 45
+  happyTimerDecrease: 10
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &1992292307416563128
@@ -390,7 +389,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -418,19 +417,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &1992292307416563133
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992292307416563122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.2907762, y: 0.78690124, z: 0.7860539}
-  m_Center: {x: 0, y: 1.4996339, z: 0.7326225}
 --- !u!65 &1992292307416563132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -442,8 +428,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
-  m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
+  m_Size: {x: 0.6140988, y: 0.8495445, z: 0.9237584}
+  m_Center: {x: 0, y: 0.38889647, z: 0.07388455}
 --- !u!95 &1992292307416563123
 Animator:
   serializedVersion: 3

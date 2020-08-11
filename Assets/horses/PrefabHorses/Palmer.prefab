@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264562253948411839}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.18923905, y: -0, z: -0, w: 0.98193103}
+  m_LocalPosition: {x: 0, y: 22.6, z: -0.90000033}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1264562253970917354}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -21.817001, y: 0, z: 0}
 --- !u!1 &1264562253970917333
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,11 +147,11 @@ MonoBehaviour:
   horseName: Palmer
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 20
+  moveWaitTimeMax: 25
+  moveDistanceMin: 7
+  moveDistanceMax: 7
+  moveSpeed: 1
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
@@ -188,8 +188,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 0.5
+  m_Acceleration: 4
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -227,8 +227,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2907762, y: 0.78690124, z: 0.7860539}
-  m_Center: {x: 0, y: 1.4996339, z: 0.7326225}
+  m_Size: {x: 0.2907762, y: 0.85469913, z: 0.7860539}
+  m_Center: {x: 0, y: 5.1177764, z: 0.7326225}
 --- !u!65 &1264562255675377006
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -240,8 +240,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
-  m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
+  m_Size: {x: 0.6140988, y: 4.42422, z: 0.96663415}
+  m_Center: {x: 0, y: 2.1762342, z: -0.039427817}
 --- !u!95 &1264562255675377001
 Animator:
   serializedVersion: 3

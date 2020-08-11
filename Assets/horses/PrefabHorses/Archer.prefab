@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Archer
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 0.75
+  moveWaitTimeMax: 7
+  moveDistanceMin: 30
+  moveDistanceMax: 30
+  moveSpeed: 8
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 125
+  timerDecrease: 65
+  happyTamingGoal: 15
+  happyTimerDecrease: 5
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &2162212102535008803
@@ -95,7 +95,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -134,8 +134,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2907762, y: 0.78690124, z: 0.7860539}
-  m_Center: {x: 0, y: 1.4996339, z: 0.7326225}
+  m_Size: {x: 0.2907762, y: 0.6577878, z: 0.41166925}
+  m_Center: {x: 0, y: 1.2276762, z: 0.5454302}
 --- !u!65 &2162212102535008831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,8 +147,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
-  m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
+  m_Size: {x: 0.6140988, y: 1.5549021, z: 0.67527974}
+  m_Center: {x: 0, y: 0.810843, z: 0.11036247}
 --- !u!95 &2162212102535008824
 Animator:
   serializedVersion: 3
@@ -254,13 +254,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2162212103807137362}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.2810999, y: -0, z: -0, w: 0.9596786}
+  m_LocalPosition: {x: 0, y: 2.099998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2162212103086741456}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -32.652, y: 0, z: 0}
 --- !u!1 &2896984671476373225
 GameObject:
   m_ObjectHideFlags: 0

@@ -85,18 +85,18 @@ MonoBehaviour:
   horseName: Bicorn
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 6
+  moveWaitTimeMax: 12
+  moveDistanceMin: 7
+  moveDistanceMax: 40
+  moveSpeed: 10
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 400
+  timerDecrease: 80
+  happyTamingGoal: 15
+  happyTimerDecrease: 1
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &3124162540432320182
@@ -126,8 +126,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 10
+  m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0

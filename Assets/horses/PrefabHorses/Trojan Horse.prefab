@@ -55,17 +55,17 @@ MonoBehaviour:
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 70
-  moveDistanceMax: 120
-  moveSpeed: 6
+  moveWaitTimeMax: 1.57
+  moveDistanceMin: 120
+  moveDistanceMax: 160
+  moveSpeed: 2
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 500
+  timerDecrease: 70
+  happyTamingGoal: 150
+  happyTimerDecrease: 25
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &90870772949243971
@@ -95,7 +95,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -134,8 +134,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2907762, y: 0.78690124, z: 0.7860539}
-  m_Center: {x: 0, y: 1.4996339, z: 0.7326225}
+  m_Size: {x: 1.5450134, y: 3.1850986, z: 4.033867}
+  m_Center: {x: -0.035232544, y: 11.1260805, z: 6.288905}
 --- !u!65 &90870772949243975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,8 +147,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
-  m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
+  m_Size: {x: 7.006317, y: 9.408028, z: 16.950401}
+  m_Center: {x: -0.028701782, y: 4.6681385, z: 0.024040222}
 --- !u!95 &90870772949243974
 Animator:
   serializedVersion: 3
@@ -917,7 +917,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90870774183619234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: 87.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 90870774067953794}

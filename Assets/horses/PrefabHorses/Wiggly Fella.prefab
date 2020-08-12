@@ -85,11 +85,11 @@ MonoBehaviour:
   horseName: Wiggly Fella
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 0.5
+  moveWaitTimeMax: 3
+  moveDistanceMin: 7
+  moveDistanceMax: 16
+  moveSpeed: 5
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
@@ -126,7 +126,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 12
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -343,6 +343,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: f3f7d005ca9123549b84931ce8d96ef8,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0dbdbc531b14eba4fb81cb5a805431b7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3f7d005ca9123549b84931ce8d96ef8, type: 3}
 --- !u!4 &4186412603353801272 stripped

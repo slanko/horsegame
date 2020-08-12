@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Sphorse Two
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
+  moveWaitTimeMin: 0.5
+  moveWaitTimeMax: 1
+  moveDistanceMin: 15
+  moveDistanceMax: 25
   moveSpeed: 6
-  camSensitivityX: 2
+  camSensitivityX: 9
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 200
+  timerDecrease: 30
+  happyTamingGoal: 135
+  happyTimerDecrease: 15
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &24886719851971483
@@ -224,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24886721139054423}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: 5.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 24886719971419813}
@@ -318,7 +318,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7084437949423742842, guid: 648277da43976c64585df7998e2dca6e, type: 3}
+  - {fileID: 2100000, guid: 1e128f65eadcafc46bd4d2f1d8fd2fdc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -396,7 +396,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1355524253555697591, guid: 648277da43976c64585df7998e2dca6e, type: 3}
+  - {fileID: 2100000, guid: 3f8274e08bea46447896bfcf8db5a821, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

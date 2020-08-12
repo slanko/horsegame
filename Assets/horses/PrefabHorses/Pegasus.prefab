@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8620235365971434680}
   - component: {fileID: 8620235365971434683}
   m_Layer: 8
-  m_Name: Pegasis
+  m_Name: Pegasus
   m_TagString: horse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Pegasus
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 2
+  moveDistanceMin: 18
+  moveDistanceMax: 28
+  moveSpeed: 9
+  camSensitivityX: 3
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 300
+  timerDecrease: 75
+  happyTamingGoal: 180
+  happyTimerDecrease: 50
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &8620235365971434660
@@ -95,15 +95,15 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 9
+  m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 2.3
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

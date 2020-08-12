@@ -85,16 +85,16 @@ MonoBehaviour:
   horseName: Zombie Horse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 8
+  moveWaitTimeMax: 12
+  moveDistanceMin: 15
+  moveDistanceMax: 25
+  moveSpeed: 4
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
+  tamingGoal: 120
+  timerDecrease: 55
   happyTamingGoal: 75
   happyTimerDecrease: 35
   imHappy: 0

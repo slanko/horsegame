@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  horseName: strawberry flavor
+  horseName: blueberry flavor
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1
@@ -62,8 +62,8 @@ MonoBehaviour:
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
+  tamingGoal: 120
+  timerDecrease: 60
   happyTamingGoal: 75
   happyTimerDecrease: 35
   imHappy: 0

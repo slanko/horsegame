@@ -5197,17 +5197,17 @@ MonoBehaviour:
   horseName: horse swarm
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 7
+  moveDistanceMin: 17
+  moveDistanceMax: 35
   moveSpeed: 6
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
+  tamingGoal: 240
+  timerDecrease: 70
+  happyTamingGoal: 95
   happyTimerDecrease: 35
   imHappy: 0
   funnyVelocity: 0

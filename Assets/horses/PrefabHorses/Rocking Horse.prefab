@@ -55,17 +55,17 @@ MonoBehaviour:
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
+  moveWaitTimeMax: 1.2
+  moveDistanceMin: 3
+  moveDistanceMax: 5
   moveSpeed: 6
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 130
+  timerDecrease: 65
+  happyTamingGoal: 80
+  happyTimerDecrease: 20
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &8858936688492757350
@@ -134,8 +134,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2907762, y: 0.78690124, z: 0.7860539}
-  m_Center: {x: 0, y: 1.4996339, z: 0.7326225}
+  m_Size: {x: 0.2907762, y: 0.67328596, z: 0.7860539}
+  m_Center: {x: 0, y: 1.5564415, z: 0.7326225}
 --- !u!65 &8858936688492757346
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -147,8 +147,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
-  m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
+  m_Size: {x: 0.6140988, y: 1.3347445, z: 2.4500523}
+  m_Center: {x: 0, y: 0.6314964, z: -0.07323265}
 --- !u!95 &8858936688492757345
 Animator:
   serializedVersion: 3

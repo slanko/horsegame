@@ -117,17 +117,17 @@ MonoBehaviour:
   horseName: Spearse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 0.78
+  moveWaitTimeMax: 1.8
+  moveDistanceMin: 40
+  moveDistanceMax: 40
+  moveSpeed: 3
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
+  tamingGoal: 125
+  timerDecrease: 65
+  happyTamingGoal: 80
   happyTimerDecrease: 35
   imHappy: 0
   funnyVelocity: 0

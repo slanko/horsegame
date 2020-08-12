@@ -115,18 +115,18 @@ MonoBehaviour:
   horseName: Pjortale
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 0.3
+  moveWaitTimeMax: 0.7
+  moveDistanceMin: 4
+  moveDistanceMax: 4
+  moveSpeed: 7
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 155
+  timerDecrease: 60
+  happyTamingGoal: 100
+  happyTimerDecrease: 45
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &858144160952006516
@@ -156,8 +156,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 4
+  m_Acceleration: 15
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0

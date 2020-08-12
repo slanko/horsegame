@@ -148,16 +148,16 @@ MonoBehaviour:
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMax: 7
+  moveDistanceMin: 25
+  moveDistanceMax: 45
+  moveSpeed: 10
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
+  tamingGoal: 300
+  timerDecrease: 70
+  happyTamingGoal: 100
   happyTimerDecrease: 35
   imHappy: 0
   funnyVelocity: 0
@@ -188,7 +188,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

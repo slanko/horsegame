@@ -147,16 +147,16 @@ MonoBehaviour:
   horseName: Rounde Boi
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 0.2
+  moveWaitTimeMax: 8
+  moveDistanceMin: 15
+  moveDistanceMax: 25
+  moveSpeed: 5
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
+  tamingGoal: 140
+  timerDecrease: 70
   happyTamingGoal: 75
   happyTimerDecrease: 35
   imHappy: 0

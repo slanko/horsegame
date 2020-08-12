@@ -86,11 +86,11 @@ MonoBehaviour:
   horseName: Rocky Horse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 7
+  moveWaitTimeMax: 13
+  moveDistanceMin: 3
+  moveDistanceMax: 16
+  moveSpeed: 5
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0

@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Wide Load
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
+  moveWaitTimeMin: 7
+  moveWaitTimeMax: 7
+  moveDistanceMin: 7
+  moveDistanceMax: 14
   moveSpeed: 6
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 250
+  timerDecrease: 75
+  happyTamingGoal: 135
+  happyTimerDecrease: 45
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &3843038122229698132

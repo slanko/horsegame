@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3118167583069964069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: 5.7, z: -5.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6016305150285877317}
@@ -147,18 +147,18 @@ MonoBehaviour:
   horseName: Cardborse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 7
+  moveDistanceMin: 0.4
+  moveDistanceMax: 2
+  moveSpeed: 2
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 50
+  timerDecrease: 10
+  happyTamingGoal: 25
+  happyTimerDecrease: 5
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &4007650266903823211

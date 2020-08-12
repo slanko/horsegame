@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Hydrorse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveWaitTimeMin: 0.5
+  moveWaitTimeMax: 0.5
+  moveDistanceMin: 20
+  moveDistanceMax: 30
+  moveSpeed: 7
+  camSensitivityX: 5
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 300
+  timerDecrease: 100
+  happyTamingGoal: 100
+  happyTimerDecrease: 50
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &1777727635149930633
@@ -95,7 +95,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -255,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777727636558417983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: 5.4, z: 0.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1777727636004069271}

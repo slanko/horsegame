@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Horsetaur
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 4
+  moveWaitTimeMax: 7
+  moveDistanceMin: 15
+  moveDistanceMax: 35
+  moveSpeed: 9
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 250
+  timerDecrease: 85
+  happyTamingGoal: 120
+  happyTimerDecrease: 45
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &6925059040430725764
@@ -95,7 +95,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 9
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -254,13 +254,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6925059041176230993}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.17721413, y: -0, z: -0, w: 0.98417234}
+  m_LocalPosition: {x: 0, y: 7.2, z: 3.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6925059040746879008}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20.415, y: 0, z: 0}
 --- !u!1001 &6925059041481178521
 PrefabInstance:
   m_ObjectHideFlags: 0

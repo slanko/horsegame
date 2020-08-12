@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5736853239900354209, guid: a94c891c2d6be36419ffcbaadf89b613, type: 3}
+  - {fileID: 2100000, guid: 2a2dc264c53b03f4980c7f07470083e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -134,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4333813639520684058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: 5.6, z: 2.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4333813638960399487}
@@ -194,18 +194,18 @@ MonoBehaviour:
   horseName: Horse Basket
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 3
+  moveDistanceMin: 16
+  moveDistanceMax: 27
   moveSpeed: 6
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 120
+  timerDecrease: 70
+  happyTamingGoal: 85
+  happyTimerDecrease: 45
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &4333813639733610999
@@ -235,7 +235,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

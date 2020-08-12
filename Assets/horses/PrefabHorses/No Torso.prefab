@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: horse with no torse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 7
+  moveDistanceMin: 16
+  moveDistanceMax: 27
+  moveSpeed: 2
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 155
+  timerDecrease: 55
+  happyTamingGoal: 85
+  happyTimerDecrease: 25
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &8401981781983399370
@@ -95,7 +95,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -223,13 +223,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8401981782348870890}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.17741272, y: -0, z: -0, w: 0.9841365}
+  m_LocalPosition: {x: 0, y: 7.5499988, z: 4.499998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8401981781995923867}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20.438002, y: 0, z: 0}
 --- !u!1 &8401981782857960619
 GameObject:
   m_ObjectHideFlags: 0

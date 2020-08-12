@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6548602246943565713}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.2586892, y: -0, z: -0, w: 0.9659606}
+  m_LocalPosition: {x: 0, y: 4.100001, z: 2.3000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6548602247300184771}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -29.985, y: 0, z: 0}
 --- !u!1 &6548602247146179387
 GameObject:
   m_ObjectHideFlags: 0
@@ -84,18 +84,18 @@ MonoBehaviour:
   horseName: Hammorse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveWaitTimeMin: 0.76
+  moveWaitTimeMax: 2
+  moveDistanceMin: 15
+  moveDistanceMax: 15
+  moveSpeed: 3
+  camSensitivityX: 4
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 95
+  timerDecrease: 45
+  happyTamingGoal: 70
+  happyTimerDecrease: 24
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &6548602247146179361

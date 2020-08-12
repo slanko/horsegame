@@ -54,18 +54,18 @@ MonoBehaviour:
   horseName: Horse On A Stick
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveWaitTimeMin: 1.52
+  moveWaitTimeMax: 3.98
+  moveDistanceMin: 10
+  moveDistanceMax: 10
+  moveSpeed: 4
+  camSensitivityX: 6
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 85
+  timerDecrease: 40
+  happyTamingGoal: 55
+  happyTimerDecrease: 20
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &2697436237988110545
@@ -95,7 +95,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -191,13 +191,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2697436238421638533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.22671804, y: -0, z: -0, w: 0.9739604}
+  m_LocalPosition: {x: 0, y: 3.599999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2697436238701808922}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -26.208002, y: 0, z: 0}
 --- !u!1 &2697436238701808923
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 9009646788086948416, guid: 559d06eeb9531e54e81e2a0b163519b9, type: 3}
+  - {fileID: 2100000, guid: 91e7ddb2ab7177840882773fb17ce6ff, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

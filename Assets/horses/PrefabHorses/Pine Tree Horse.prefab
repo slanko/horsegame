@@ -51,14 +51,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  horseName: Pine
+  horseName: Pine Phil
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 20
+  moveWaitTimeMax: 25
+  moveDistanceMin: 7
+  moveDistanceMax: 7
+  moveSpeed: 9
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
@@ -254,13 +254,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6533259692988755904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.38268322, y: -0, z: -0, w: 0.9238797}
+  m_LocalPosition: {x: 0, y: 22.6, z: -3.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6533259692736558761}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -45.000004, y: 0, z: 0}
 --- !u!1001 &6533259692188465997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,6 +343,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -8173584713836927698, guid: 35d6d206897b98948aae1edc2feb5b02,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e689cc1a3d410364fb47451319d65353, type: 2}
+    - target: {fileID: 898606835246669508, guid: 35d6d206897b98948aae1edc2feb5b02,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d34c18b0eec65d8458a88eb99eec309d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d6d206897b98948aae1edc2feb5b02, type: 3}
 --- !u!4 &2292466203846561879 stripped

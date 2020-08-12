@@ -115,18 +115,18 @@ MonoBehaviour:
   horseName: Headless Horse
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveWaitTimeMin: 0.45
+  moveWaitTimeMax: 1
+  moveDistanceMin: 3
+  moveDistanceMax: 4
+  moveSpeed: 1
+  camSensitivityX: 0.5
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 90
+  timerDecrease: 45
+  happyTamingGoal: 45
+  happyTimerDecrease: 15
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &3005499952518773630
@@ -156,7 +156,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 405608333517213064, guid: b123d614b5bc9c940b8616324874ff7c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1c69c08650f3cc4ab3a02b085e035ae, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b123d614b5bc9c940b8616324874ff7c, type: 3}
 --- !u!4 &7840514641865490335 stripped

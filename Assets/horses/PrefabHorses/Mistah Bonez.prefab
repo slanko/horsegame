@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7486355838606545441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalPosition: {x: 0, y: 5.4, z: -0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7486355839563471163}
@@ -84,18 +84,18 @@ MonoBehaviour:
   horseName: Skelly
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 6
+  moveWaitTimeMax: 16
+  moveDistanceMin: 50
+  moveDistanceMax: 55
+  moveSpeed: 2
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 166
+  timerDecrease: 77
+  happyTamingGoal: 122
+  happyTimerDecrease: 44
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &7486355838654207290
@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7753874468429139502, guid: b4d7a932f0cd4214f85797886aff527c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb7f954ce60eab843a9daa55b5f8f367, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4d7a932f0cd4214f85797886aff527c, type: 3}
 --- !u!4 &7877185529569546458 stripped

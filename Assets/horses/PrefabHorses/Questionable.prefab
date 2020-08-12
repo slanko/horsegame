@@ -86,13 +86,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9220714043950501677}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7.55, z: 0}
+  m_LocalRotation: {x: -0.1351794, y: -0, z: -0, w: 0.9908211}
+  m_LocalPosition: {x: 0, y: 2.82, z: -1.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9220714043180324707}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15.538001, y: 0, z: 0}
 --- !u!1 &9220714044529367769
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,18 +147,18 @@ MonoBehaviour:
   horseName: ???
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 4
+  moveWaitTimeMax: 4
+  moveDistanceMin: 10
+  moveDistanceMax: 25
+  moveSpeed: 8
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 170
+  timerDecrease: 80
+  happyTamingGoal: 88
+  happyTimerDecrease: 45
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &9220714044529367767
@@ -188,7 +188,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3433660557441571179, guid: 6039933935e5ec44eb929aca09a9242a,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 320579b1e0d6afe4095026fdc5c83ca6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6039933935e5ec44eb929aca09a9242a, type: 3}
 --- !u!4 &4218811131961794960 stripped

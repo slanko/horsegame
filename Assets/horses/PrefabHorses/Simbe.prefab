@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6764263936705501561, guid: 0d0ab3f85838ac74cb0b94f8ab0e06f1, type: 3}
+  - {fileID: 2100000, guid: 9aae7fcca77fb5c498aafe6aadfed676, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,7 +135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6668369955147711650, guid: 0d0ab3f85838ac74cb0b94f8ab0e06f1, type: 3}
+  - {fileID: 2100000, guid: 0edfe164271e75b46b38d7a8e9cc45fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -303,17 +303,17 @@ MonoBehaviour:
   horseName: Simbe
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 7
+  moveDistanceMin: 4.05
+  moveDistanceMax: 15
+  moveSpeed: 4
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
+  tamingGoal: 130
   timerDecrease: 50
-  happyTamingGoal: 75
+  happyTamingGoal: 105
   happyTimerDecrease: 35
   imHappy: 0
   funnyVelocity: 0

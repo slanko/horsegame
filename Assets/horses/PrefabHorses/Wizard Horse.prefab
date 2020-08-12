@@ -116,18 +116,18 @@ MonoBehaviour:
   horseName: Great Sage
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
+  moveWaitTimeMin: 5
   moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveDistanceMin: 7
+  moveDistanceMax: 15
+  moveSpeed: 8
+  camSensitivityX: 3
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 240
+  timerDecrease: 60
+  happyTamingGoal: 185
+  happyTimerDecrease: 25
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &2854084770900570014
@@ -157,7 +157,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 6
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -328,6 +328,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2207376707743615026, guid: b6e82337f7effdf41a415ef32bd46291,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a047c534fc991c2488f12e6649be375b, type: 2}
+    - target: {fileID: -1545131762084532300, guid: b6e82337f7effdf41a415ef32bd46291,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: af431f0afb640b246b8cefbe2d6470c4, type: 2}
+    - target: {fileID: -2764620932930547588, guid: b6e82337f7effdf41a415ef32bd46291,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99184f667791b1445bb64942b533d4ad, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e82337f7effdf41a415ef32bd46291, type: 3}
 --- !u!4 &7124987306832399513 stripped

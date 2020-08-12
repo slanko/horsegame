@@ -85,18 +85,18 @@ MonoBehaviour:
   horseName: Shortie
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
+  moveWaitTimeMin: 2
+  moveWaitTimeMax: 3
+  moveDistanceMin: 3.5
+  moveDistanceMax: 10
+  moveSpeed: 3
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
-  timerDecrease: 50
-  happyTamingGoal: 75
-  happyTimerDecrease: 35
+  tamingGoal: 50
+  timerDecrease: 25
+  happyTamingGoal: 35
+  happyTimerDecrease: 15
   imHappy: 0
   funnyVelocity: 0
 --- !u!114 &8846124789504828437
@@ -126,7 +126,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -328,6 +328,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7548703776259893121, guid: 5324f550bc7536a408ca166a3123f9fe,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 43e43b59ca0174745a11dd1189270ffc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5324f550bc7536a408ca166a3123f9fe, type: 3}
 --- !u!4 &2169398297664374508 stripped

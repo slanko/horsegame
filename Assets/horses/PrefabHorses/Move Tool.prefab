@@ -54,15 +54,15 @@ MonoBehaviour:
   horseName: Movey
   isTamed: 0
   beingRidden: 0
-  moveWaitTimeMin: 1
-  moveWaitTimeMax: 5
-  moveDistanceMin: 5
-  moveDistanceMax: 20
-  moveSpeed: 6
-  camSensitivityX: 2
+  moveWaitTimeMin: 3
+  moveWaitTimeMax: 3
+  moveDistanceMin: 7
+  moveDistanceMax: 14
+  moveSpeed: 7
+  camSensitivityX: 1
   myRideAnchor: {fileID: 0}
   thingILike: 0
-  tamingGoal: 100
+  tamingGoal: 110
   timerDecrease: 50
   happyTamingGoal: 75
   happyTimerDecrease: 35
@@ -95,7 +95,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -328,6 +328,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1151674760053794486, guid: 3468921afa005324e81ed90acc587ca3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ede257270a0cc5b4fad1e78d7f158bc9, type: 2}
+    - target: {fileID: 1382718211422001833, guid: 3468921afa005324e81ed90acc587ca3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 846829007114850468a9fc77c273cf87, type: 2}
+    - target: {fileID: -6084552611585567901, guid: 3468921afa005324e81ed90acc587ca3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e82579205db7d384182156d104d6364c, type: 2}
+    - target: {fileID: 7112243441955825952, guid: 3468921afa005324e81ed90acc587ca3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6819bb9083fe72498c3c69fcf53798c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3468921afa005324e81ed90acc587ca3, type: 3}
 --- !u!4 &5312195405153311361 stripped

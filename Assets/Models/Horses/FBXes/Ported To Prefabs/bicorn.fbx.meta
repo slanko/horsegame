@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: 394ec34468829164293fd3362af404ac
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -81,7 +84,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.114999995
+    globalScale: 11.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

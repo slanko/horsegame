@@ -273,6 +273,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HORSEFLOWER
       objectReference: {fileID: 0}
+    - target: {fileID: -8087107142253184978, guid: 09bb441616de54b47859b5c897ee253d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad3d3162a0063344dbec5b871bc67a8d, type: 2}
     - target: {fileID: -4216859302048453862, guid: 09bb441616de54b47859b5c897ee253d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -328,6 +333,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4822937707055277629, guid: 09bb441616de54b47859b5c897ee253d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0dab858e6561d0144a9b60e2d04fc09e, type: 2}
+    - target: {fileID: 8805348133011356206, guid: 09bb441616de54b47859b5c897ee253d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e4826d4d173ca9944afa478985c7042c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09bb441616de54b47859b5c897ee253d, type: 3}
 --- !u!4 &5241173325590146411 stripped

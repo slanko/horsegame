@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class characterInteract : MonoBehaviour
 {
+    godScript GOD;
     float vert, horiz;
     public LayerMask interactableLayers;
     public float interactDistance;
@@ -26,6 +27,7 @@ public class characterInteract : MonoBehaviour
     void Start()
     {
         cC = GetComponent<characterController>();
+        GOD = GameObject.Find("GOD").GetComponent<godScript>();
     }
 
     // Update is called once per frame
@@ -62,6 +64,10 @@ public class characterInteract : MonoBehaviour
                     targetName.text = tS.myName;
                     if (Input.GetKeyDown(interactKey))
                     {
+                        if (GOD.tutorialTime == true)
+                        {
+                            GOD.tBz.setThirdBool();
+                        }
                         heldThrowables.Add(rayHit.collider.gameObject);
                         rayHit.collider.gameObject.SetActive(false);
                     }
@@ -83,6 +89,20 @@ public class characterInteract : MonoBehaviour
                     if (Input.GetKeyDown(interactKey))
                     {
                         hLS.AddToHorseList();
+                    }
+                }
+                if(rayHit.collider.gameObject.tag == "tree")
+                {
+                    var treeScript = rayHit.collider.gameObject.GetComponent<treeScript>();
+                    targetName.text = treeScript.myName;
+                    if (Input.GetKeyDown(interactKey))
+                    {
+                        if(GOD.tutorialTime == true)
+                        {
+                            GOD.tBz.setSecondBool();
+                        }
+
+                        treeScript.dropIt();
                     }
                 }
 

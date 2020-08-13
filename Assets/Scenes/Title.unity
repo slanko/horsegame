@@ -1874,7 +1874,7 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Horse
 
-        Game OwO'
+        Game'
       objectReference: {fileID: 0}
     - target: {fileID: 1759655282638306198, guid: 0cce6b9d29fe75d4ab1fdf57dd486254,
         type: 3}

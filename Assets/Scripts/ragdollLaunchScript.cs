@@ -11,11 +11,13 @@ public class ragdollLaunchScript : MonoBehaviour
     Rigidbody rb;
     public GameObject myHips;
     characterController cC;
+    godScript GOD;
     // Start is called before the first frame update
     void Start()
     {
         cC = GameObject.Find("Player").GetComponent<characterController>();
         rb = myHips.GetComponent<Rigidbody>();
+        GOD = GameObject.Find("GOD").GetComponent<godScript>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,10 @@ public class ragdollLaunchScript : MonoBehaviour
             Debug.Log("bong");
             cC.gameObject.transform.SetParent(null);
             cC.gameObject.transform.position = myHips.transform.position;
+            if(GOD.tutorialTime == true)
+            {
+                GOD.tBz.setFirstBool();
+            }
             Destroy(gameObject);
         }
         else

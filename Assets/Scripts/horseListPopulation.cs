@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class horseListPopulation : MonoBehaviour
 {
     public horseListScript theList;
-    public GameObject horseListUI;
+    public GameObject horseListUI, horseListEntry;
     public Sprite bigImage;
 
     // Start is called before the first frame update
@@ -18,6 +18,18 @@ public class horseListPopulation : MonoBehaviour
 
     public void populateList()
     {
+        for(int yahoo = 0; yahoo < theList.masterHorseList.Length; yahoo++)
+        {
+            var entryJustAdded = Instantiate(horseListEntry);
+            entryJustAdded.transform.SetParent(this.gameObject.transform);
+            entryJustAdded.transform.localScale = new Vector3(1, 1, 1);
+        }
+
+
+
+
+
+
         int i = 0;
         foreach (Transform child in transform)
         {

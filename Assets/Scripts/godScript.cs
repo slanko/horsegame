@@ -5,18 +5,23 @@ using UnityEngine.UI;
 
 public class godScript : MonoBehaviour
 {
+    public GameObject godlet;
     public characterController cC;
     public characterInteract charInt;
     public Slider tamingSlider;
     public GameObject tamingSliderParent;
     public KeyCode tameKey;
-
+    public bool tutorialTime;
+    public tutorialBoolz tBz;
     public List<GameObject> horseList;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(tutorialTime == true)
+        {
+            tBz = GameObject.Find("GOD/godlet").GetComponent<tutorialBoolz>();
+        }
     }
 
     // Update is called once per frame

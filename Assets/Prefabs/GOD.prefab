@@ -1,5 +1,111 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &185785730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185785731}
+  - component: {fileID: 185785735}
+  - component: {fileID: 185785734}
+  - component: {fileID: 185785733}
+  - component: {fileID: 185785732}
+  m_Layer: 0
+  m_Name: godlet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185785731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185785730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.44, y: 0, z: 0}
+  m_LocalScale: {x: 0.24742, y: 0.24742, z: 0.24742}
+  m_Children: []
+  m_Father: {fileID: 112094439631229192}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &185785735
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185785730}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &185785734
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185785730}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 219e0c74d4ee89b4ba9e2ffe78825191, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &185785733
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185785730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &185785732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185785730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26e38d51252f6349a89c1ca9cd7bbba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &897299611
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +249,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 897299615}
+  - {fileID: 185785731}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -217,11 +324,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dcc5e97de58e8749abac76c3fb3de03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  godlet: {fileID: 185785730}
   cC: {fileID: 0}
   charInt: {fileID: 0}
   tamingSlider: {fileID: 0}
   tamingSliderParent: {fileID: 0}
   tameKey: 32
+  tutorialTime: 1
+  tBz: {fileID: 0}
   horseList: []
 --- !u!54 &1903973727
 Rigidbody:
@@ -252,75 +362,610 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterHorseList:
-  - horseName: lovely horse
+  - horseName: training horse
+    prefab: {fileID: 2482604447619751115, guid: ead8f27821d056842b30de9703b18f46,
+      type: 3}
+    logged: 0
+    description: his acting's a bit wooden
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: e0356984905fd464ca24398523d74f03, type: 3}
+  - horseName: protohorse
     prefab: {fileID: 7928745845243787427, guid: 27855afee145bb3409d2500f7c4651d0,
       type: 3}
     logged: 0
-    description: 'this horse is really lovely
-
-
-      no really this is a very nice horse'
-    bigPicture: {fileID: 21300000, guid: 82c6c3b2e8bfbda4ab1a1b0a29f552ee, type: 3}
-    smallPicture: {fileID: 21300000, guid: 65eff370b3671454bbdc25fe1b2fa87d, type: 3}
+    description: he's really lovely once you get to know him
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 4d888bb72a4536d4e8418de95530334c, type: 3}
+  - horseName: crooked horse
+    prefab: {fileID: 7962765759366515457, guid: dd737e1508fbb4b499e58b26d533a844,
+      type: 3}
+    logged: 0
+    description: everybody talk about the straw that broke the camel's back... but
+      what about the horse's?
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 0afde75c8135f46469d82caca7cdd288, type: 3}
+  - horseName: big head fred
+    prefab: {fileID: 3014858960253446887, guid: a0793ef0ce4b59946b04d38a2dda43c0,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 486c44905ea3f254c94211d07c14a7e1, type: 3}
+  - horseName: tiny head tim
+    prefab: {fileID: 5901431312459324767, guid: 68a37c94f5b061f4082c8d357fabed50,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 171d80353261af24db539112c82f7205, type: 3}
+  - horseName: rounde boi
+    prefab: {fileID: 7604381863550137881, guid: df3e064de23400c4ebf098300c6e160f,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: e36536a00d793b145b6f649d7cc0f1ad, type: 3}
+  - horseName: cubey calvin
+    prefab: {fileID: 1219603749522239975, guid: cf007c1de99980445b5cd2b6c5787ea6,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: b6088570b64dd294bb4df40579784ee3, type: 3}
+  - horseName: double head horse
+    prefab: {fileID: 2521066706462452748, guid: 283a641b36f34da478e3d00740af99c1,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: dcc87b58f23cb2e43baec723f91ef152, type: 3}
+  - horseName: double butt horse
+    prefab: {fileID: 8164284974112841560, guid: 70b2b15720f1b724a9ea8203ae463b9b,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 8f76b6a73a8bd39489ed8d6e108e04b1, type: 3}
+  - horseName: buff horse
+    prefab: {fileID: 9144430659094710562, guid: e0f891ccda3783a48adecef25e4367dd,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 0923e87b2a417aa49b0c84ff43762849, type: 3}
+  - horseName: horse on a stick
+    prefab: {fileID: 2697436237988110551, guid: b199423f4fded334baabedb586f98b46,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 4f1c523f43f7ad741907d46f41dda6ee, type: 3}
+  - horseName: flower horse
+    prefab: {fileID: 992717783045908352, guid: 07e079ff19467c24aaf2e070a64b121b, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: b937147ed4ea4954e845346744a38ece, type: 3}
+  - horseName: dapper daryl
+    prefab: {fileID: 843472776650955243, guid: d1e00cfa7632a124fa019f929413f1a3, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: b1c9e3099bf7ce44dbd5adb02a26012c, type: 3}
+  - horseName: doorse
+    prefab: {fileID: 1846107283667294281, guid: d7cf2a35c19702b4c8bce82b7f7b1749,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: b89d56b5cfe57de468365f79d5cd447a, type: 3}
+  - horseName: unicorn
+    prefab: {fileID: 4468785955633583783, guid: 7789a0ef12273bc49b11303cc44127e6,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 746285d2ccbb73f4a8c59829c0685a31, type: 3}
+  - horseName: bicorn
+    prefab: {fileID: 3124162540432320184, guid: 4749f6d552bb8b74f852b2ab26730795,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 2f3098f56af67a94f9179be1d35da8a4, type: 3}
   - horseName: flippy horse
     prefab: {fileID: 1039501318535982979, guid: b53f16aa0c0fda948b8311a2529294f4,
       type: 3}
     logged: 0
-    description: someone's had a bit too much caffiene
-    bigPicture: {fileID: 21300000, guid: ca022e6db7641c64e9f42f7ed5ee16e5, type: 3}
-    smallPicture: {fileID: 21300000, guid: a60bbdb9c41d52e48ba0defcf8d3d0c0, type: 3}
-  - horseName: '#^&^*--'
-    prefab: {fileID: 2590284744735650482, guid: d5f55fa40b99de146824ea9cf4d93cb9,
+    description: someone's had a bit too much caffiene.....
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 8dad805c6ae73f1489d7d47f61351ca7, type: 3}
+  - horseName: horsetaur
+    prefab: {fileID: 6925059040430725762, guid: 13081f3fa7c3c2e49877e54378cc4a55,
       type: 3}
     logged: 0
-    description: 'IndexOutOfRangeException: Index was outside the bounds of the array.
-
-      horseFunctionsScript.Start () (at Assets/Scripts/horseFunctionsScript.cs:18)'
-    bigPicture: {fileID: 21300000, guid: de6c06d1f4be3da46afe6c29c2c7cf8d, type: 3}
-    smallPicture: {fileID: 21300000, guid: 0050a1604c0b8e440a78b627f09ac67e, type: 3}
-  - horseName: bunny horse
-    prefab: {fileID: 2925003640563818283, guid: 45c091c03d3c2914e9889105eff8bc70,
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 11f1a474514c28048ae8be4da97945d5, type: 3}
+  - horseName: lengthy larry
+    prefab: {fileID: 7483575742932940326, guid: 1aba77a28cd9836418072d5b2c396603,
       type: 3}
     logged: 0
-    description: it's a... "hare-se"???
-    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
-    smallPicture: {fileID: 21300000, guid: 288c25ece87ec454a9608f36b4f7e840, type: 3}
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 03f1e2a0541aa2f4685ef7fd6466bdc2, type: 3}
+  - horseName: no head
+    prefab: {fileID: 3005499952518773508, guid: 2fe01df3788c2a04db28bab2d902b1e9,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 25d3e343d6c535045849c2b249b7d602, type: 3}
+  - horseName: no horse
+    prefab: {fileID: 1157723744846182336, guid: 76166aad62b55a0469c6209fefcf6a6b,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: abbd781affb57524a9713ff4ac47918d, type: 3}
+  - horseName: pine tree horse
+    prefab: {fileID: 6533259691904453364, guid: 22257824dd7a0fe46adc76d70008dfc1,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 3d24c92668fd18a4fb2ce68d6f91ab11, type: 3}
+  - horseName: pinecone horse
+    prefab: {fileID: 6739510274822818403, guid: cc73f926ea683a643acbf797a5e93506,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 464c7ffc4464f0f489df272f7fd6c4d5, type: 3}
+  - horseName: tree horse tracey
+    prefab: {fileID: 6966222581493327425, guid: 767652d42882ff34484637df8d0aad6c,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 64b9c81ad929d064ab90cb7a263eeeb8, type: 3}
+  - horseName: palmer
+    prefab: {fileID: 1264562255675377000, guid: eeb3187f3eddd554885799c784062614,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: dd3a8ffa8b837af4c9aa2f61a689417d, type: 3}
+  - horseName: leggy horse
+    prefab: {fileID: 8673629068163412121, guid: 9ab5914ec1724724da7a825e9c355611,
+      type: 3}
+    logged: 0
+    description: the one that started it all......
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: f9925ef5005f3f44c90235025b4a7828, type: 3}
+  - horseName: rocking horse
+    prefab: {fileID: 8858936688492757344, guid: 25cd9e774068fba40842c7d0bc8a2971,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 79b0e6e8b5abe3245bdbfb4f985d3364, type: 3}
+  - horseName: simbe
+    prefab: {fileID: 3668537495973596867, guid: 4e9e7b23d9090e2469a80e8d0eff6809,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 99f8b3e05c5cfe548a68e5b65b16f513, type: 3}
+  - horseName: stylish stacey
+    prefab: {fileID: 7494589330694694592, guid: bc528cffd7fd6d548b1d9831d4d0c35a,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 1b51f30eb571d9446bfa1404cf3cf274, type: 3}
   - horseName: upright horse
     prefab: {fileID: 2678365691364677382, guid: 870c59e8c344cad49ab88ee7bde862c1,
       type: 3}
     logged: 0
-    description: are you a man??? or a mouse??????
-    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
-    smallPicture: {fileID: 21300000, guid: c9d051d04fe1b1043894803801a30dfd, type: 3}
-  - horseName: very crooked horse
-    prefab: {fileID: 4646193215611802797, guid: 86b4905b7efa6064ab554f284f61fabd,
+    description: how's he doing that???
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 0a8f8f715d0a8044cb6c254a4fb16322, type: 3}
+  - horseName: wide load
+    prefab: {fileID: 3843038122229698142, guid: 01c6e43a7fa1ae04b95b1005caa9fa35,
       type: 3}
     logged: 0
-    description: everybody talks about the straw that broke the camel's back.... but
-      what about the horse's???
-    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
-    smallPicture: {fileID: 21300000, guid: fbaff1e1e0b7bc7408ddf7f90daa46b2, type: 3}
-  - horseName: six legged horse
-    prefab: {fileID: 3688344959415695192, guid: d0f1d31a6c9f9f44bba9b744dfa947e1,
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: e37ea6dea4a191547983eb2c3a468638, type: 3}
+  - horseName: bunny horse
+    prefab: {fileID: 2925003640563818283, guid: 45c091c03d3c2914e9889105eff8bc70,
       type: 3}
     logged: 0
-    description: the one that started it all
-    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
-    smallPicture: {fileID: 21300000, guid: 65eff370b3671454bbdc25fe1b2fa87d, type: 3}
-  - horseName: V8 horse
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 0f57019843ed46347bc3ed3f8439febd, type: 3}
+  - horseName: giraffe
+    prefab: {fileID: 1675532788903104400, guid: f300ce00e7db14746981e76addd269d4,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 1085923a79f7b0847bed3ca872a4b099, type: 3}
+  - horseName: shawty
+    prefab: {fileID: 2455280351373533593, guid: e1721471c8d06b54b8b2c386cb782615,
+      type: 3}
+    logged: 0
+    description: he's like a melody in my head........
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: b536fffb3a568a84b9fb020afdef6978, type: 3}
+  - horseName: pegasus
+    prefab: {fileID: 8620235365971434682, guid: 68e754c84a7cebc41b40b16983d01276,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: c9be94ea3b1af0a4d8279556a30f6e8c, type: 3}
+  - horseName: wizard
+    prefab: {fileID: 2854084770900569984, guid: 087213343aa3a6a408f4c7918e4ec51d,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 8e5fc73b228aca643aa7021192e2c03d, type: 3}
+  - horseName: snorse
+    prefab: {fileID: 3259068420404635144, guid: f752ebcb88cf6eb4e85dd4bd8ab5bd80,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: f215467aff460cf449540c7926f6a2d6, type: 3}
+  - horseName: floorse
+    prefab: {fileID: 4042313812403067095, guid: c76efac541d5b2248a1f95e799cd9704,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: ed99620fcf332534d89e5843ef10ae21, type: 3}
+  - horseName: wallse
+    prefab: {fileID: 1126346952698298054, guid: f1abb7ad62ba0474eaa70323e883f9e0,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 06a11dcc9732cc445878be5de3897aec, type: 3}
+  - horseName: fall apart horse
+    prefab: {fileID: 874166027128457405, guid: f49bd89a22f3a8c48a159e4733ede6cd, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: a5bf534a6abc35b48b361fe17eb5998c, type: 3}
+  - horseName: horse basket
+    prefab: {fileID: 4333813639733610985, guid: b2ce00dcd74127b4a8b34710883ced3a,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 81da82f30f714c7438bc9e8acc311ec4, type: 3}
+  - horseName: horse with no torse
+    prefab: {fileID: 8401981781983399360, guid: bf1205af768acb944bbeed526c1a7aff,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 145902229139a224e8e0624859519cd5, type: 3}
+  - horseName: mirrorse
+    prefab: {fileID: 210988530199823251, guid: 70bf5973c922fde4cba6ed695a46171a, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 8346e838bb3a1354e8d6cbd27cb67f88, type: 3}
+  - horseName: smoothly reduced horse
+    prefab: {fileID: 7316161173843891605, guid: 498bb1bd9e5482d40820bfd4d496c16c,
+      type: 3}
+    logged: 0
+    description: 20% less saturated fats
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 277228d003f4ef74088862c3d152ced9, type: 3}
+  - horseName: badly reduced horse
+    prefab: {fileID: 3151827572879265819, guid: a1c3f21a2d2970a4f93bb865a70521ec,
+      type: 3}
+    logged: 0
+    description: 20% less content
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 502513dacbbd2be41aa8f9a0d9d0cf59, type: 3}
+  - horseName: badly reduced pegasus
+    prefab: {fileID: 5027682049777337939, guid: 6b291ab35394464468d3466048dc5d82,
+      type: 3}
+    logged: 0
+    description: 20% less pegasus
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 3cbd93a5f943fd44482461f67f296b49, type: 3}
+  - horseName: strawberry jelly horse
+    prefab: {fileID: 7201629591657689047, guid: 28ae9de5bb8e58c4ab56ce60d75a3c41,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 9744edb1a4958b74fb02b9f22caaa808, type: 3}
+  - horseName: blueberry jelly horse
+    prefab: {fileID: 290411916262162628, guid: de92f3c4e8f15ca42a880d910727ff29, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: ec105d2931e94494e85d4dfc72814eae, type: 3}
+  - horseName: lemon jelly horse
+    prefab: {fileID: 3781069257999830338, guid: d83469a11bd976e448485e6d24c82d75,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 1d615e10b676a804691b0eeed8e5fd40, type: 3}
+  - horseName: lime jelly horse
+    prefab: {fileID: 8672129540217794811, guid: 1ed163898cf63e64db9798b55b427dd2,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: f3ebcb233c76482429483dab764b76da, type: 3}
+  - horseName: ghostie horse
+    prefab: {fileID: 8421579419517527278, guid: 51b59334720e83b4f8a059404d666de8,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: ae2bd5d7eb9506549a10c59350c3f379, type: 3}
+  - horseName: wiggly fella
+    prefab: {fileID: 5136190113563135049, guid: af81034c6c680744d8493c3ab6199be7,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: beaaab1f7433a674f812ab4efbe2aedb, type: 3}
+  - horseName: vampire horse
+    prefab: {fileID: 7363937216604763070, guid: 89a57143820a13f43a249e48c2472176,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 1307a37827f71a043982cf9c360e355c, type: 3}
+  - horseName: zombie horse
+    prefab: {fileID: 1082947388793027137, guid: 604f536ae5d673840bea5444e4621f4e,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 61c55939ff2167d4dbe29da1f30609aa, type: 3}
+  - horseName: horse swarm
+    prefab: {fileID: 6237750056979191877, guid: 7159b67d3f189304d8757ffea09172c9,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 02f8b1d00f0c5bd4eb29d148f1d33274, type: 3}
+  - horseName: just armour
+    prefab: {fileID: 2960987869657323959, guid: 255e13f210540c441a57fa5fb18ff812,
+      type: 3}
+    logged: 0
+    description: that'll be $2.50
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 5b0dcb8d246d924478c0110a23bccedb, type: 3}
+  - horseName: questionable horse
+    prefab: {fileID: 9220714044529367769, guid: b4e7666660feeb241b34df4994fb6e99,
+      type: 3}
+    logged: 0
+    description: huh????
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 41126c84eab2a854daf2cbaaec267806, type: 3}
+  - horseName: trojan horse
+    prefab: {fileID: 90870772949243977, guid: d5cf33b5a331ed94ea7e64583e44cd5b, type: 3}
+    logged: 0
+    description: nothing to see here.......
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 0ae3508197009934e9b66fddc83f2033, type: 3}
+  - horseName: rocky horse
+    prefab: {fileID: 6856735624425129251, guid: 11db587aabb1b6a4bb79236bf8ee20c2,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: d0293b10acb55b04b99a141bd42e15b7, type: 3}
+  - horseName: mr. bones
+    prefab: {fileID: 7486355838654207292, guid: b56846405e96ec64e9439c5b41e86a7c,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: fd1f3e45abb99ba4ab9ec561a600c381, type: 3}
+  - horseName: v8 horse
     prefab: {fileID: 8744334812979599507, guid: def938032faf94c4d8ffe3a4d6894a33,
       type: 3}
     logged: 0
-    description: that's a lotta horsepower
-    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
-    smallPicture: {fileID: 21300000, guid: 3d954c3b29b81ed4aa847c391e32d4ac, type: 3}
+    description: that's a lot of horsepower
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: dac84c2612a37c74ab3bb68dfc2aba9d, type: 3}
+  - horseName: punk horse
+    prefab: {fileID: 409837005538542154, guid: ccd657e4ba9e2c3489b2ae2681d38444, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 84de5b482defb734eb41f49c6345625d, type: 3}
+  - horseName: horseberus
+    prefab: {fileID: 1777727635149930643, guid: 14b4ae9b54ff8164299a3e82eefdb755,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 3a92df9f1320ed74d9c0b7e9b2dcf652, type: 3}
+  - horseName: hot spice
+    prefab: {fileID: 8775301940730075350, guid: 58677f7a964c3804c9dc9b9d6f881900,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 80e34a34efc3e03478942b0788abb31d, type: 3}
+  - horseName: flares
+    prefab: {fileID: 3351174577860872202, guid: 31a22269267c5514293fb202538bcbfe,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 527922e30b6f9e740b8d5f7a3714930b, type: 3}
+  - horseName: hammorse
+    prefab: {fileID: 6548602247146179387, guid: ef57f239151be2546b28d789af7c25dd,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 258214aea1d6db443a52a4fd5bde6c14, type: 3}
+  - horseName: sworse
+    prefab: {fileID: 129305249512356260, guid: fe0b6ebcaed1c384686816cdef9ebd82, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 761e0c7338677e144a4a928001f23ec8, type: 3}
+  - horseName: jet engine
+    prefab: {fileID: 5289725407785489388, guid: 98447ae654722e9498d294700c00276a,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 5a69aff86cc4cb44a9226934a3d3c9a4, type: 3}
+  - horseName: soulja horse
+    prefab: {fileID: 8003213566473489725, guid: f2b85c5bcf4afdb4e8d6275f25f82e31,
+      type: 3}
+    logged: 0
+    description: crank that
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 0358d0cfefe14eb4fab840e8584f000c, type: 3}
+  - horseName: error horse
+    prefab: {fileID: 2590284744735650482, guid: d5f55fa40b99de146824ea9cf4d93cb9,
+      type: 3}
+    logged: 0
+    description: 'NullReferenceException
+
+      UnityEngine.GameObject.GetComponent[T] () (at C:/buildslave/unity/build/Runtime/Export/Scripting/GameObject.bindings.cs:28)
+
+      horseListPopulation.populateList () (at Assets/Scripts/horseListPopulation.cs:24)
+
+      horseListPopulation.Start () (at Assets/Scripts/horseListPopulation.cs:15)'
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 009a47c7631b4dd4f91b757b2a2abda0, type: 3}
+  - horseName: translate tool
+    prefab: {fileID: 919298775373578575, guid: e2a2d478335b68b46af089cbd7690ac9, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 5ab7ca6087f566342852409a408c1b85, type: 3}
   - horseName: '"horse" horse'
     prefab: {fileID: 7597441823633368009, guid: f8d4e290c1003fd47a8230a4c4e7b285,
       type: 3}
     logged: 0
-    description: H... O... R... S... what does it spell???
-    bigPicture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}
-    smallPicture: {fileID: 21300000, guid: 612fb7f237a57b94f836a741ec08dffd, type: 3}
+    description: H...O...R...S... what could it spell???
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: b9d7397a115a51f4bb03b60b899fa65f, type: 3}
+  - horseName: many weights
+    prefab: {fileID: 8802673195976356071, guid: 1f8006ffbb4afc14e876f2714743eea5,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 44d4b784423651f488f3b8163b2b37a1, type: 3}
+  - horseName: seahorse
+    prefab: {fileID: 3915529507154144650, guid: 6213e907f3b51f3429d9dadf710fd0d7,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: a9822ab8742318449abac8ba7569ce02, type: 3}
+  - horseName: sphorse
+    prefab: {fileID: 24886719851971485, guid: 66c53131cd55124438894dfca390a7c4, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 10f605e002e1aee4bacbe3c17c31b3ec, type: 3}
+  - horseName: clam horse
+    prefab: {fileID: 4895164257804496389, guid: 83be70e1690a2fd40b33e37b6adb2ffb,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 881e58953f7f3f344bc1f4ef618f988e, type: 3}
+  - horseName: merhorse
+    prefab: {fileID: 3466864564517802258, guid: 0a4a69ef5918fbf47975e53a7c5d9f2b,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: a9b61f9e38305ea4ba176b2972037ce4, type: 3}
+  - horseName: superhorse
+    prefab: {fileID: 8825182739953405246, guid: 9c1c95d358c1ff04886125dc903c5dd3,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: a1a07b987a8400d4e8340cbf73554763, type: 3}
+  - horseName: spearse
+    prefab: {fileID: 4285880159498951097, guid: 7b0a087184b11ce4bb12107bef33f240,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 4506c4b65bc41f74d98c442d6aaaef35, type: 3}
+  - horseName: portal horse
+    prefab: {fileID: 858144160952006526, guid: f2b542d456b5c404db5f7dab05ea10fb, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: bf0afc7b8f9a86b4b8d96e22b5cbcc6f, type: 3}
+  - horseName: springy horse
+    prefab: {fileID: 2070886453354688631, guid: dd7e94db50061824da90e5fc3b54d505,
+      type: 3}
+    logged: 0
+    description: '[boioioing sound effect]'
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 61a2b4178acc5904e8da827170c3d2a7, type: 3}
+  - horseName: gear horse
+    prefab: {fileID: 901319753760249696, guid: 0615142d43d9f5047bbdac4570a89faa, type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 364532d011922d742a15b98640ead4e2, type: 3}
+  - horseName: barrel 'o' horses
+    prefab: {fileID: 1992292307416563122, guid: 4a080bcc52def804bbc2c90a6ae69c90,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: f04ee2ea9c880dc41a019e8012a043c9, type: 3}
+  - horseName: david and bowie
+    prefab: {fileID: 2162212102535008825, guid: 1a73b7356c99b3149a1cca36ef5df0d4,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: f9bfe03feb5c1f34bbc91693135f339c, type: 3}
+  - horseName: saturn sally
+    prefab: {fileID: 8964464466794340473, guid: e4eee75380d7fe54a87f3bdc6ceebc59,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 0aaa72f4cf2196740bde1342a94b176f, type: 3}
+  - horseName: yladlanvavaraarototh
+    prefab: {fileID: 8643866548617031063, guid: 71e7e933d788911459bc3ff981527e5b,
+      type: 3}
+    logged: 0
+    description: 
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: 39acba058434cd741975ea4b8810c48d, type: 3}
+  - horseName: blackhole singularity
+    prefab: {fileID: 7223489302527542242, guid: dc9da81b452b77b45a28537d91d4f3a4,
+      type: 3}
+    logged: 0
+    description: designation H87*
+    bigPicture: {fileID: 0}
+    smallPicture: {fileID: 21300000, guid: d7a301f80076b6c479e6e133ae126d83, type: 3}
   horseDetected: 0
   hLP: {fileID: 0}
   currentHorseSelected: 0

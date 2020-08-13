@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  horseName: Hydrorse
+  horseName: horseberus
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 0.5

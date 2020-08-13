@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  horseName: Smoothe Reduce
+  horseName: properly reduced horse
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1

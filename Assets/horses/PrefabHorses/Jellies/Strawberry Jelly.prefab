@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  horseName: strawberry flavor
+  horseName: strawberry Jelly
   isTamed: 0
   beingRidden: 0
   moveWaitTimeMin: 1

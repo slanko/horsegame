@@ -861,6 +861,9 @@ MonoBehaviour:
   myRagdoll: {fileID: 5098863401345064557, guid: f61b3e010cff31a468f6ded577058f3d,
     type: 3}
   myMeshRenderer: {fileID: 0}
+  camMinX: 0
+  camMaxX: 0
+  camCurrentX: 0
   debugText: {fileID: 1301021048}
 --- !u!54 &384991661
 Rigidbody:
@@ -2143,7 +2146,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masterHorseList: []
+  horseDetected: 0
   hLP: {fileID: 0}
+  currentHorseSelected: 0
+  currentPipe: {fileID: 0}
 --- !u!4 &907259625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 843472776650955235, guid: d1e00cfa7632a124fa019f929413f1a3,
@@ -4371,6 +4377,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Speed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751080388058700543, guid: d5cf33b5a331ed94ea7e64583e44cd5b,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5cf33b5a331ed94ea7e64583e44cd5b, type: 3}

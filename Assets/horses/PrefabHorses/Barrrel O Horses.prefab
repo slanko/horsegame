@@ -1180,6 +1180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7708646606209880016}
+  - component: {fileID: 3320375352860772410}
   m_Layer: 0
   m_Name: barrelOhorses
   m_TagString: Untagged
@@ -1209,6 +1210,25 @@ Transform:
   m_Father: {fileID: 1992292306809016162}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3320375352860772410
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6674832623077948867}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7948542331e425c4cb08a3344045a3c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6788169871508456713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,6 +1272,7 @@ GameObject:
   - component: {fileID: 969475783636242196}
   - component: {fileID: 4374130503279455908}
   - component: {fileID: 8502991356231492679}
+  - component: {fileID: 7121573337537527263}
   m_Layer: 0
   m_Name: horsebarrel_b2
   m_TagString: Untagged
@@ -1320,6 +1341,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &7121573337537527263
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7834024956731738965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4737b23e8b125c14cb8ee03f18db9875, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8301448648565486558
 GameObject:
   m_ObjectHideFlags: 0

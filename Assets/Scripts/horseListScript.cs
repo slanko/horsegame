@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using GameAnalyticsSDK;
 [System.Serializable]
 public struct horseStruct
 {
@@ -15,19 +16,12 @@ public struct horseStruct
 public class horseListScript : MonoBehaviour
 {
     public horseStruct[] masterHorseList;
-    godScript GOD;
     public bool horseDetected;
     horseBehaviour hB;
     public horseListPopulation hLP;
     public int currentHorseSelected = 0;
     public GameObject currentPipe;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        GOD = GameObject.Find("GOD").GetComponent<godScript>();
-
-    }
 
     public void AddToHorseList()
     {
@@ -43,11 +37,11 @@ public class horseListScript : MonoBehaviour
                     masterHorseList[i].logged = true;
                     PlayerPrefs.SetInt("horse" + i, 1);
                     Debug.Log("horse" + i + " = " + PlayerPrefs.GetInt("horse" + i));
+                    GameAnalytics.NewDesignEvent("HorseCollected: " + horsey.horseName);
                 }
             }
             if(itsME == true)
             {
-
                 hB.anim.SetTrigger("whee");
             }
         }

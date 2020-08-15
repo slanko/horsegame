@@ -59,7 +59,7 @@ MonoBehaviour:
   moveDistanceMin: 15
   moveDistanceMax: 25
   moveSpeed: 6
-  camSensitivityX: 9
+  camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
   tamingGoal: 200

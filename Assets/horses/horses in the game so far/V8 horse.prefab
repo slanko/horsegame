@@ -281,7 +281,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8744334812979599507}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -45.6, y: 0.074, z: 48.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -312,7 +312,7 @@ MonoBehaviour:
   moveSpeed: 10
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
-  thingILike: 0
+  thingILike: 3
   tamingGoal: 150
   timerDecrease: 75
   happyTamingGoal: 100
@@ -485,21 +485,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 04e9ac0c260c8ce4d898abf78f3703cf,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 04e9ac0c260c8ce4d898abf78f3703cf,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 04e9ac0c260c8ce4d898abf78f3703cf,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -1200090388303032844, guid: 04e9ac0c260c8ce4d898abf78f3703cf,
         type: 3}

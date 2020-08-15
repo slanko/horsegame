@@ -20,4 +20,23 @@ public class tutorialBoolz : MonoBehaviour
         anim.SetBool("tutorialBool3", true);
     }
 
+    public void setFourthBool()
+    {
+        anim.SetBool("tutorialBool4", true);
+    }
+
+    public void setFifthBool()
+    {
+        anim.SetBool("tutorialBool5", true);
+    }
+
+    public void setSixthBool()
+    {
+        anim.SetBool("tutorialBool6", true);
+    }
+
+    public void setSeventhBool()
+    {
+        anim.SetBool("tutorialBool7", true);
+    }
 }

@@ -21,7 +21,12 @@ public class horseListScript : MonoBehaviour
     public horseListPopulation hLP;
     public int currentHorseSelected = 0;
     public GameObject currentPipe;
+    godScript GOD;
 
+    private void Start()
+    {
+        GOD = GameObject.Find("GOD").GetComponent<godScript>();
+    }
 
     public void AddToHorseList()
     {
@@ -42,6 +47,10 @@ public class horseListScript : MonoBehaviour
             }
             if(itsME == true)
             {
+                if(GOD.tutorialTime == true)
+                {
+                    GOD.tBz.setSeventhBool();
+                }
                 hB.anim.SetTrigger("whee");
             }
         }
@@ -62,6 +71,11 @@ public class horseListScript : MonoBehaviour
             if(hB.isTamed == true)
             {
                 horseDetected = true;
+
+                if(GOD.tutorialTime == true)
+                {
+                    GOD.tBz.setSixthBool();
+                }
             }
         }
     }

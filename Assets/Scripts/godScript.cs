@@ -51,6 +51,10 @@ public class godScript : MonoBehaviour
                 {
                 charInt.hB.isTamed = true;
                 cC.goToRide();
+                if (tutorialTime == true)
+                {
+                    tBz.setFifthBool();
+                }
             }
             tamingSlider.value = tamingSlider.value - charInt.hB.timerDecrease * Time.deltaTime;
         }

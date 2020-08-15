@@ -141,6 +141,10 @@ public class horseBehaviour : MonoBehaviour
             var otherTS = other.gameObject.GetComponent<throwablesScript>();
             if(otherTS.myType == thingILike)
             {
+                if(GOD.tutorialTime == true)
+                {
+                    GOD.tBz.setFourthBool();
+                }
                 imHappy = true;
                 tamingGoal = happyTamingGoal;
                 timerDecrease = happyTimerDecrease;

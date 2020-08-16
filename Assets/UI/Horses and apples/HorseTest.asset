@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: PLACEHOLDER
   Description: Could it be, that all we see or seem, is but a dream within a dream?
-  picture: {fileID: 21300000, guid: e178ed07803774c4bb06f4640bd80008, type: 3}
+  picture: {fileID: 21300000, guid: 92ece9beeae9bd547bdc357ed347e197, type: 3}

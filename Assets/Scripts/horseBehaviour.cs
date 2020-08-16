@@ -27,6 +27,7 @@ public class horseBehaviour : MonoBehaviour
     ParticleSystem heartz;
     public AudioClip[] neighs;
     AudioSource aud;
+    public AudioClip stepNoise;
 
     //horse riding movement stuff
     float vert, horiz;
@@ -86,6 +87,15 @@ public class horseBehaviour : MonoBehaviour
             }
         }
 
+        if (beingRidden == true)
+        {
+            transform.Translate(movement * moveSpeed * Time.deltaTime);
+            if (cC.pauseMenu.activeSelf == false)
+            {
+                transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+            }
+
+        }
 
         //funny velocity stuff
         figureOutVelocity();
@@ -134,19 +144,6 @@ public class horseBehaviour : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        if(beingRidden == true)
-        {
-            transform.Translate(movement * moveSpeed * Time.deltaTime);
-            if(cC.pauseMenu.activeSelf == false)
-            {
-                transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
-            }
-
-        }
-    }
-
     //throwable interaction
     private void OnCollisionEnter(Collision other)
     {
@@ -185,5 +182,10 @@ public class horseBehaviour : MonoBehaviour
     {
         aud.PlayOneShot(neighs[Random.Range(0, neighs.Length)]);
         Invoke("neighTime", Random.Range(10, 60));
+    }
+
+    public void playStepNoise()
+    {
+        aud.PlayOneShot(stepNoise);
     }
 }

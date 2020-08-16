@@ -12,12 +12,15 @@ public class ragdollLaunchScript : MonoBehaviour
     public GameObject myHips;
     characterController cC;
     godScript GOD;
+    AudioSource aud;
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         cC = GameObject.Find("Player").GetComponent<characterController>();
         rb = myHips.GetComponent<Rigidbody>();
         GOD = GameObject.Find("GOD").GetComponent<godScript>();
+        aud.volume = GOD.audioVolume;
     }
 
     // Update is called once per frame

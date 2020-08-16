@@ -265,6 +265,7 @@ MonoBehaviour:
   neighs:
   - {fileID: 8300000, guid: fb0073cfa276f3942b2cca11dece094d, type: 3}
   - {fileID: 8300000, guid: f7c8e276ca036b5448ef5e9beaf2be82, type: 3}
+  stepNoise: {fileID: 8300000, guid: a116efa47949fbf4caa672e164aca406, type: 3}
   funnyVelocity: 0
 --- !u!114 &5027682049777337929
 MonoBehaviour:
@@ -320,7 +321,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &5027682049777337934
 BoxCollider:
   m_ObjectHideFlags: 0

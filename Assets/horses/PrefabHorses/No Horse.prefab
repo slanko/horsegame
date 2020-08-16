@@ -150,6 +150,7 @@ MonoBehaviour:
   neighs:
   - {fileID: 8300000, guid: fb0073cfa276f3942b2cca11dece094d, type: 3}
   - {fileID: 8300000, guid: f7c8e276ca036b5448ef5e9beaf2be82, type: 3}
+  stepNoise: {fileID: 8300000, guid: a116efa47949fbf4caa672e164aca406, type: 3}
   funnyVelocity: 0
 --- !u!114 &1157723744846182334
 MonoBehaviour:
@@ -205,7 +206,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &1157723744846182333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -371,7 +372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157723745000688744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.49, z: -0.5}
+  m_LocalPosition: {x: 0, y: 2.14, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1157723745456971389}

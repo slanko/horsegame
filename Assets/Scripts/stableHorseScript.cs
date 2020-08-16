@@ -7,6 +7,8 @@ public class stableHorseScript : MonoBehaviour
 {
     public bool tutorialHorse;
     public Animator anim, anim2;
+    AudioSource aud;
+    public AudioClip[] neighSound;
 
     public Text myText;
     [Multiline(3)]
@@ -17,6 +19,8 @@ public class stableHorseScript : MonoBehaviour
 
     private void Start()
     {
+        aud = GetComponent<AudioSource>();
+        aud.volume = PlayerPrefs.GetFloat("audioVolume") * 0.5f ;
         if(tutorialHorse == true)
         {
             anim.SetBool("tutorialHorse", true);
@@ -45,6 +49,7 @@ public class stableHorseScript : MonoBehaviour
     public void setMyText(string stringy)
     {
         myText.text = stringy;
+        aud.PlayOneShot(neighSound[Random.Range(0, neighSound.Length)]);
     }
 
     public void endTutorial()

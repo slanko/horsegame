@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class pauseMenuScript : MonoBehaviour
 {
-    public GameObject pauseMenu, settingsMenu;
-
+    public GameObject pauseMenu, settingsMenu, thaDiary;
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +29,8 @@ public class pauseMenuScript : MonoBehaviour
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        closeSettingsMenu();
+        thaDiary.SetActive(false);
     }
 
     public void openMenu()

@@ -3,7 +3,10 @@ guid: f24f824e9b7a4fe419f4e811415346fa
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - anim: {instanceID: 0}
+  - myRideAnchor: {instanceID: 0}
+  - stepNoise: {fileID: 8300000, guid: a116efa47949fbf4caa672e164aca406, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

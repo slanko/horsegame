@@ -323,6 +323,7 @@ MonoBehaviour:
   neighs:
   - {fileID: 8300000, guid: fb0073cfa276f3942b2cca11dece094d, type: 3}
   - {fileID: 8300000, guid: f7c8e276ca036b5448ef5e9beaf2be82, type: 3}
+  stepNoise: {fileID: 8300000, guid: a116efa47949fbf4caa672e164aca406, type: 3}
   funnyVelocity: 0
 --- !u!114 &6087745175842276982
 MonoBehaviour:
@@ -378,7 +379,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &533422857076980072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -655,7 +656,7 @@ PrefabInstance:
     - target: {fileID: 2107661607276070375, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 3e-45
       objectReference: {fileID: 0}
     - target: {fileID: 2107661607276070375, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}

@@ -551,7 +551,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 5943
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -814,11 +814,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5445931687483387265}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 5161b86bb6d1a1d43864bf8d2c8fdf9f,
-        type: 3}
-      propertyPath: m_Name
-      value: everyman2
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5161b86bb6d1a1d43864bf8d2c8fdf9f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -894,6 +889,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 376aad361ecab52479f5b4240ebabc84, type: 2}
+    - target: {fileID: -927199367670048503, guid: 5161b86bb6d1a1d43864bf8d2c8fdf9f,
+        type: 3}
+      propertyPath: m_Name
+      value: everyman2
+      objectReference: {fileID: 0}
     - target: {fileID: -4294989286517462000, guid: 5161b86bb6d1a1d43864bf8d2c8fdf9f,
         type: 3}
       propertyPath: m_LocalRotation.x

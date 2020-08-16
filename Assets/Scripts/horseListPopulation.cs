@@ -10,7 +10,7 @@ public class horseListPopulation : MonoBehaviour
     public Sprite bigImage;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         populateList(true);
     }
@@ -27,6 +27,7 @@ public class horseListPopulation : MonoBehaviour
                 theList.masterHorseList[yahoo].logged = true;
                 entryJustAdded.transform.SetParent(this.gameObject.transform);
                 entryJustAdded.transform.localScale = new Vector3(1, 1, 1);
+                Debug.Log(theList.masterHorseList[yahoo].horseName + " | " + theList.masterHorseList[yahoo].prefab.GetComponent<horseBehaviour>().horseName);
             }
         }
 

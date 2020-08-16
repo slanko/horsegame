@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myType: 4
   myName: apple of eden
-  myImage: {fileID: 0}
+  myImage: {fileID: 21300000, guid: cd482d02409a3144fabf894e6b1219d3, type: 3}
 --- !u!54 &8969992083106611294
 Rigidbody:
   m_ObjectHideFlags: 0

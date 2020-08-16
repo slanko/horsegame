@@ -12,19 +12,22 @@ public class horseListPopulation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        populateList();
+        populateList(true);
     }
 
 
-    public void populateList()
+    public void populateList(bool firstTime)
     {
-        for(int yahoo = 0; yahoo < theList.masterHorseList.Length; yahoo++)
+        if(firstTime == true)
         {
-            var entryJustAdded = Instantiate(horseListEntry);
-            theList.masterHorseList[yahoo].horseName = theList.masterHorseList[yahoo].prefab.GetComponent<horseBehaviour>().horseName;
-            theList.masterHorseList[yahoo].logged = true;
-            entryJustAdded.transform.SetParent(this.gameObject.transform);
-            entryJustAdded.transform.localScale = new Vector3(1, 1, 1);
+            for (int yahoo = 0; yahoo < theList.masterHorseList.Length; yahoo++)
+            {
+                var entryJustAdded = Instantiate(horseListEntry);
+                theList.masterHorseList[yahoo].horseName = theList.masterHorseList[yahoo].prefab.GetComponent<horseBehaviour>().horseName;
+                theList.masterHorseList[yahoo].logged = true;
+                entryJustAdded.transform.SetParent(this.gameObject.transform);
+                entryJustAdded.transform.localScale = new Vector3(1, 1, 1);
+            }
         }
 
         int i = 0;

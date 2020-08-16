@@ -54,7 +54,7 @@ public class horseListScript : MonoBehaviour
                 hB.anim.SetTrigger("whee");
             }
         }
-        hLP.populateList();
+        hLP.populateList(false);
     }
 
     public void summonHorse()

@@ -14,12 +14,14 @@ public class openMenu : MonoBehaviour
     {
         diary.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         hLS = GameObject.Find("GOD").GetComponent<horseListScript>();
     }
     public void openTheMenu()
     {
         diary.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         hLS.currentPipe = myPipe;
     }
 
@@ -27,5 +29,6 @@ public class openMenu : MonoBehaviour
     {
         diary.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

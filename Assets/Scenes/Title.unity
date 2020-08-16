@@ -342,7 +342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9199f47fa24358f4c9042284414c4283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 1666199490}
 --- !u!224 &473656410 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3628866036162611252, guid: a0001942ab42d9a4b81607d7eba31c0d,
@@ -2294,6 +2293,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628866035514421197, guid: a0001942ab42d9a4b81607d7eba31c0d,
+        type: 3}
+      propertyPath: m_Name
+      value: sleeeeeenky
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628866034643061525, guid: a0001942ab42d9a4b81607d7eba31c0d,
+        type: 3}
+      propertyPath: m_Text
+      value: sleeeeeenky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0001942ab42d9a4b81607d7eba31c0d, type: 3}

@@ -94,7 +94,7 @@ MonoBehaviour:
   moveSpeed: 6
   camSensitivityX: 3
   myRideAnchor: {fileID: 0}
-  thingILike: 0
+  thingILike: 8
   tamingGoal: 999
   timerDecrease: 50
   happyTamingGoal: 1

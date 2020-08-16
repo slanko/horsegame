@@ -24,6 +24,7 @@ public class horseBehaviour : MonoBehaviour
     public float timerDecrease, happyTamingGoal, happyTimerDecrease;
     horseFunctionsScript hFS;
     public bool imHappy;
+    ParticleSystem heartz;
 
     //horse riding movement stuff
     float vert, horiz;
@@ -51,6 +52,8 @@ public class horseBehaviour : MonoBehaviour
         changePosition();
         nav.speed = moveSpeed;
         GOD.horseCount++;
+        heartz = transform.Find("Heartsies").gameObject.GetComponent<ParticleSystem>();
+
     }
 
     // Update is called once per frame
@@ -146,6 +149,7 @@ public class horseBehaviour : MonoBehaviour
                 {
                     GOD.tBz.setFourthBool();
                 }
+                heartz.Play();
                 imHappy = true;
                 tamingGoal = happyTamingGoal;
                 timerDecrease = happyTimerDecrease;

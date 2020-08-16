@@ -143,6 +143,7 @@ public class characterInteract : MonoBehaviour
         heldThrowables[0].transform.position = throwPoint.transform.position;
         heldThrowables[0].transform.rotation = throwPoint.transform.rotation;
         heldThrowables[0].SetActive(true);
+        heldThrowables[0].GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         heldThrowables[0].GetComponent<Rigidbody>().AddForce(throwPoint.transform.forward * 20, ForceMode.Impulse);
         heldThrowables.Remove(heldThrowables[0]);
     }

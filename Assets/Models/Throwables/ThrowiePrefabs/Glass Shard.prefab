@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myType: 7
   myName: glass shard
-  myImage: {fileID: 0}
+  myImage: {fileID: 21300000, guid: 57c52d83c7ee0874fa82fb2211081110, type: 3}
 --- !u!54 &598128867408951455
 Rigidbody:
   m_ObjectHideFlags: 0

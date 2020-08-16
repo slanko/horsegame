@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myType: 9
   myName: THREE delicous apple
-  myImage: {fileID: 21300000, guid: 0e76c906e30cab04c8848d143f1a4feb, type: 3}
+  myImage: {fileID: 21300000, guid: c79da75fa8f28eb4099c81fd1c863a1e, type: 3}
 --- !u!54 &8792322935577769677
 Rigidbody:
   m_ObjectHideFlags: 0

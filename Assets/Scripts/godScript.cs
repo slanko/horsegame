@@ -14,10 +14,14 @@ public class godScript : MonoBehaviour
     public bool tutorialTime;
     public tutorialBoolz tBz;
     public List<GameObject> horseList;
+    public AudioSource muzik;
+    public float audioVolume;
+    public float horseCount;
 
     // Start is called before the first frame update
     void Start()
     {
+        muzik = GetComponent<AudioSource>();
         if(tutorialTime == true)
         {
             tBz = GameObject.Find("GOD/godlet").GetComponent<tutorialBoolz>();

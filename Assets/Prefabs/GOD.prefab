@@ -230,6 +230,10 @@ GameObject:
   - component: {fileID: 7114226667578245887}
   - component: {fileID: 1903973727}
   - component: {fileID: 1903973733}
+  - component: {fileID: 837348092}
+  - component: {fileID: 837348083}
+  - component: {fileID: 837348091}
+  - component: {fileID: 837348093}
   m_Layer: 0
   m_Name: GOD
   m_TagString: Untagged
@@ -330,9 +334,11 @@ MonoBehaviour:
   tamingSlider: {fileID: 0}
   tamingSliderParent: {fileID: 0}
   tameKey: 32
-  tutorialTime: 1
+  tutorialTime: 0
   tBz: {fileID: 0}
   horseList: []
+  muzik: {fileID: 837348092}
+  audioVolume: 0
 --- !u!54 &1903973727
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -494,7 +500,7 @@ MonoBehaviour:
     prefab: {fileID: 7483575742932940326, guid: 1aba77a28cd9836418072d5b2c396603,
       type: 3}
     logged: 0
-    description: COME BACK TO THIS ONE
+    description: it took us a long time to come up with this description
     bigPicture: {fileID: 0}
     smallPicture: {fileID: 21300000, guid: 03f1e2a0541aa2f4685ef7fd6466bdc2, type: 3}
   - horseName: no head
@@ -973,3 +979,150 @@ MonoBehaviour:
   hLP: {fileID: 0}
   currentHorseSelected: 0
   currentPipe: {fileID: 0}
+--- !u!82 &837348092
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377537177147088604}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bd3fa31622287884a8f785cf3d10adbb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &837348083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377537177147088604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d3713538a2cbc4ebf6e546a2a8a78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theTree: {fileID: 4673241874822788316, guid: 4dcc711bf4923e842a6511f16c07f12d, type: 3}
+  myTerrains:
+  - {fileID: 15600000, guid: 969bd406971dff744b8f82adc9159ba8, type: 2}
+  - {fileID: 15600000, guid: fe4177b568800724e9ee68aa811bb8c8, type: 2}
+  - {fileID: 15600000, guid: f03910a93e3fa1540b8ccc2bb9b478aa, type: 2}
+  - {fileID: 15600000, guid: 72bdf8635d431c849a393850cad5c275, type: 2}
+  actualTerrains:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &837348091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377537177147088604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004a58f1452749e42bb828a383221d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 0}
+  settingsMenu: {fileID: 0}
+--- !u!114 &837348093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6377537177147088604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f897c701937e8c4dbb447a90a610aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}

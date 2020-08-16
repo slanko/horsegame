@@ -27,6 +27,7 @@ public class characterController : MonoBehaviour
     public KeyCode tameKey;
     public bool enteredTaming;
     public KeyCode throwKey;
+    Animator anim;
 
     //ragdoll mode stuff
     [Header ("Ragdoll Mode Variables")]
@@ -43,6 +44,7 @@ public class characterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         myCap = GetComponent<CapsuleCollider>();
         charInt = GetComponent<characterInteract>();
@@ -52,27 +54,16 @@ public class characterController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        //heha
+        if(isMoving == true)
         {
-            currentState = playerState.GROUNDED;
+            anim.speed = 1;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        else
         {
-            currentState = playerState.JUMPING;
+            anim.speed = 0;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            currentState = playerState.TAMING;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            currentState = playerState.RIDING;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            goToRagdoll();
-        }
-
+        //hahe
         if (currentState == playerState.GROUNDED)
         {
             updateGrounded();

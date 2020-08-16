@@ -22,10 +22,12 @@ public class horseListScript : MonoBehaviour
     public int currentHorseSelected = 0;
     public GameObject currentPipe;
     godScript GOD;
+    
 
     private void Start()
     {
         GOD = GameObject.Find("GOD").GetComponent<godScript>();
+        GameAnalytics.Initialize();
     }
 
     public void AddToHorseList()

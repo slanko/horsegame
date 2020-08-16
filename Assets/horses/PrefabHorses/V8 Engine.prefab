@@ -90,7 +90,7 @@ MonoBehaviour:
   moveWaitTimeMax: 5
   moveDistanceMin: 5
   moveDistanceMax: 20
-  moveSpeed: 6
+  moveSpeed: 20
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0

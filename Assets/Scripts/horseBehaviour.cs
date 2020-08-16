@@ -50,6 +50,7 @@ public class horseBehaviour : MonoBehaviour
         }
         changePosition();
         nav.speed = moveSpeed;
+        GOD.horseCount++;
     }
 
     // Update is called once per frame

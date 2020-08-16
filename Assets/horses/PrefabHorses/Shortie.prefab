@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 716209269931589918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.159998, z: 0.72999954}
+  m_LocalPosition: {x: 0, y: -8.159998, z: -2.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2169398297664374508}
@@ -62,7 +62,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2455280351373533593}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -413.14, y: -8.16, z: 14.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -90,7 +90,7 @@ MonoBehaviour:
   moveWaitTimeMax: 3
   moveDistanceMin: 3.5
   moveDistanceMax: 10
-  moveSpeed: 3
+  moveSpeed: 8
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
@@ -164,10 +164,10 @@ BoxCollider:
   m_GameObject: {fileID: 2455280351373533593}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.2907762, y: 0.78690124, z: 0.7860539}
-  m_Center: {x: 0, y: 1.4996339, z: 0.7326225}
+  m_Size: {x: 0.2907762, y: 1.0506024, z: 0.5001795}
+  m_Center: {x: 0, y: 0.57357764, z: 0.5896853}
 --- !u!65 &4072126476316476994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -179,8 +179,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6140988, y: 1.3347445, z: 1.4128274}
-  m_Center: {x: 0, y: 0.6314964, z: -0.0047225356}
+  m_Size: {x: 0.6140988, y: 1.3347445, z: 0.7768631}
+  m_Center: {x: 0, y: 0.6314964, z: 0.12649918}
 --- !u!95 &1915218549076879418
 Animator:
   serializedVersion: 3

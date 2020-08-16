@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 9140844034223286881}
   - component: {fileID: 598128867408951455}
   - component: {fileID: 525376686250480250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glass Shard
-  m_TagString: Untagged
+  m_TagString: throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae26a02f20a68b94da5ecab6532179b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myType: 0
+  myType: 7
   myName: glass shard
-  myImage: {fileID: 0}
+  myImage: {fileID: 21300000, guid: 57c52d83c7ee0874fa82fb2211081110, type: 3}
 --- !u!54 &598128867408951455
 Rigidbody:
   m_ObjectHideFlags: 0

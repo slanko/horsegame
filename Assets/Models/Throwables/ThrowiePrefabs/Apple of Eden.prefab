@@ -90,9 +90,9 @@ GameObject:
   - component: {fileID: 24425032913733958}
   - component: {fileID: 8969992083106611294}
   - component: {fileID: 8174573855142098317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Apple of Eden
-  m_TagString: Untagged
+  m_TagString: throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae26a02f20a68b94da5ecab6532179b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myType: 0
+  myType: 4
   myName: apple of eden
-  myImage: {fileID: 0}
+  myImage: {fileID: 21300000, guid: cd482d02409a3144fabf894e6b1219d3, type: 3}
 --- !u!54 &8969992083106611294
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -28,6 +28,7 @@ public class characterController : MonoBehaviour
     public bool enteredTaming;
     public KeyCode throwKey;
     Animator anim;
+    public GameObject pauseMenu;
 
     //ragdoll mode stuff
     [Header ("Ragdoll Mode Variables")]
@@ -55,7 +56,7 @@ public class characterController : MonoBehaviour
     private void Update()
     {
         //heha
-        if(isMoving == true)
+        if(isMoving == true && currentState == playerState.GROUNDED)
         {
             anim.speed = 1;
         }
@@ -88,12 +89,14 @@ public class characterController : MonoBehaviour
         //debug thing
         debugText.text = currentState.ToString();
         //cam stuff
-
-        var cameraAngle = cam.transform.rotation.eulerAngles;
-        camCurrentX += Input.GetAxis("Mouse Y") * camSensitivityY;
-        camCurrentX = Mathf.Clamp(camCurrentX, camMinX, camMaxX);
-        cameraAngle.x = camCurrentX;
-        cam.transform.rotation = Quaternion.Euler(cameraAngle);
+        if(pauseMenu.activeSelf == false)
+        {
+            var cameraAngle = cam.transform.rotation.eulerAngles;
+            camCurrentX += Input.GetAxis("Mouse Y") * camSensitivityY;
+            camCurrentX = Mathf.Clamp(camCurrentX, camMinX, camMaxX);
+            cameraAngle.x = camCurrentX;
+            cam.transform.rotation = Quaternion.Euler(cameraAngle);
+        }
 
         if (isMoving && currentState == playerState.GROUNDED)
         {
@@ -101,7 +104,10 @@ public class characterController : MonoBehaviour
         }
         if (currentState != playerState.RIDING && currentState != playerState.TAMING)
         {
-            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+            if(pauseMenu.activeSelf == false)
+            {
+                transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+            }
         }
 
     }
@@ -133,7 +139,7 @@ public class characterController : MonoBehaviour
         dB.enabled = true;
         if (Input.GetKeyDown(charInt.interactKey))
         {
-            goToGrounded();
+            goToGrounded(new Vector3(-1, 0.5f, 0));
         }
     }
 
@@ -153,13 +159,14 @@ public class characterController : MonoBehaviour
         currentState = playerState.RIDING;
     }
 
-    public void goToGrounded()
+    public void goToGrounded(Vector3 newVector)
     {
         charInt.hB.beingRidden = false;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         myCap.enabled = true;
         transform.SetParent(null);
         transform.localScale = new Vector3(1, 1, 1);
+        transform.position = transform.position + newVector;
         transform.rotation = new Quaternion(0, transform.rotation.y, 0, 0);
         cam.transform.rotation = new Quaternion(0, 0, 0, 0);
         currentState = playerState.GROUNDED;
@@ -188,8 +195,12 @@ public class characterController : MonoBehaviour
         if(currentState == playerState.GROUNDED)
         {
             myMeshRenderer.enabled = true;
-            myMeshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+            myMeshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
             spinCamGoTo.targetToFollow = gameObject;
+        }
+        if (currentState == playerState.TAMING)
+        {
+            myMeshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
         }
     }
 }

@@ -12,7 +12,9 @@ public class horseListPopulation : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        Time.timeScale = 1f;
         populateList(true);
+        this.enabled = false;
     }
 
 
@@ -24,7 +26,6 @@ public class horseListPopulation : MonoBehaviour
             {
                 var entryJustAdded = Instantiate(horseListEntry);
                 theList.masterHorseList[yahoo].horseName = theList.masterHorseList[yahoo].prefab.GetComponent<horseBehaviour>().horseName;
-                theList.masterHorseList[yahoo].logged = true;
                 entryJustAdded.transform.SetParent(this.gameObject.transform);
                 entryJustAdded.transform.localScale = new Vector3(1, 1, 1);
                 Debug.Log(theList.masterHorseList[yahoo].horseName + " | " + theList.masterHorseList[yahoo].prefab.GetComponent<horseBehaviour>().horseName);

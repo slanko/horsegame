@@ -98,7 +98,7 @@ AnimationClip:
   m_Events:
   - time: 0.5
     functionName: setMyText
-    data: finally, speak to me to catalog the horse
+    data: finally, speak to me to catalog the horse!!
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

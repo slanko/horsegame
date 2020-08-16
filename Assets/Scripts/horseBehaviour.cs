@@ -25,6 +25,8 @@ public class horseBehaviour : MonoBehaviour
     horseFunctionsScript hFS;
     public bool imHappy;
     ParticleSystem heartz;
+    public AudioClip[] neighs;
+    AudioSource aud;
 
     //horse riding movement stuff
     float vert, horiz;
@@ -38,6 +40,7 @@ public class horseBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aud = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         myRideAnchor = transform.Find("Model Parent/RideAnchor");
         GOD = GameObject.Find("GOD").GetComponent<godScript>();
@@ -53,12 +56,15 @@ public class horseBehaviour : MonoBehaviour
         nav.speed = moveSpeed;
         GOD.horseCount++;
         heartz = transform.Find("Heartsies").gameObject.GetComponent<ParticleSystem>();
+        neighTime();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        aud.volume = GOD.audioVolume * 0.25f;
+
         if (beingRidden)
         {
             nav.enabled = false;
@@ -133,7 +139,11 @@ public class horseBehaviour : MonoBehaviour
         if(beingRidden == true)
         {
             transform.Translate(movement * moveSpeed * Time.deltaTime);
-            transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+            if(cC.pauseMenu.activeSelf == false)
+            {
+                transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
+            }
+
         }
     }
 
@@ -169,5 +179,11 @@ public class horseBehaviour : MonoBehaviour
     void killMe()
     {
         Destroy(gameObject);
+    }
+
+    void neighTime()
+    {
+        aud.PlayOneShot(neighs[Random.Range(0, neighs.Length)]);
+        Invoke("neighTime", Random.Range(10, 60));
     }
 }

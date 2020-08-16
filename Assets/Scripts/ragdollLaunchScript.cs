@@ -48,7 +48,7 @@ public class ragdollLaunchScript : MonoBehaviour
         yield return new WaitForSeconds(3);
         if (rb.velocity.magnitude < 1)
         {
-            cC.goToGrounded();
+            cC.goToGrounded(new Vector3(0,0,0));
             Debug.Log("bong");
             cC.gameObject.transform.SetParent(null);
             cC.gameObject.transform.position = myHips.transform.position;

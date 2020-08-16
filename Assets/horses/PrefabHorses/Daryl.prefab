@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 843472776650955246}
   - component: {fileID: 843472776650955241}
   - component: {fileID: 843472776650955240}
+  - component: {fileID: 5982490436034883480}
   m_Layer: 8
   m_Name: Daryl
   m_TagString: horse
@@ -231,7 +232,7 @@ MonoBehaviour:
   moveWaitTimeMax: 7
   moveDistanceMin: 0
   moveDistanceMax: 0
-  moveSpeed: 2.5
+  moveSpeed: 5
   camSensitivityX: 1
   myRideAnchor: {fileID: 0}
   thingILike: 0
@@ -240,6 +241,9 @@ MonoBehaviour:
   happyTamingGoal: 330
   happyTimerDecrease: 45
   imHappy: 0
+  neighs:
+  - {fileID: 8300000, guid: fb0073cfa276f3942b2cca11dece094d, type: 3}
+  - {fileID: 8300000, guid: f7c8e276ca036b5448ef5e9beaf2be82, type: 3}
   funnyVelocity: 0
 --- !u!114 &843472776650955245
 MonoBehaviour:
@@ -341,6 +345,102 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &5982490436034883480
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843472776650955243}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2173482440543812469
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,11 +924,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 843472776650955235}
     m_Modifications:
-    - target: {fileID: 7526545346950991174, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: m_Name
-      value: Heartsies
-      objectReference: {fileID: 0}
     - target: {fileID: 1160699851286769952, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -883,6 +978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526545346950991174, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: m_Name
+      value: Heartsies
       objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}

@@ -38,5 +38,6 @@ public class tutorialBoolz : MonoBehaviour
     public void setSeventhBool()
     {
         anim.SetBool("tutorialBool7", true);
+        PlayerPrefs.SetFloat("tutorialComplete", 1);
     }
 }

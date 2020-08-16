@@ -5131,6 +5131,8 @@ GameObject:
   - component: {fileID: 8421579419517527273}
   - component: {fileID: 8421579419517527272}
   - component: {fileID: 8421579419517527279}
+  - component: {fileID: 4952878224642938037}
+  - component: {fileID: 4705932477265649368}
   m_Layer: 8
   m_Name: Ghostie Horse
   m_TagString: horse
@@ -5174,7 +5176,7 @@ MonoBehaviour:
   moveWaitTimeMax: 4
   moveDistanceMin: 7
   moveDistanceMax: 15
-  moveSpeed: 3
+  moveSpeed: 5
   camSensitivityX: 2
   myRideAnchor: {fileID: 0}
   thingILike: 0
@@ -5183,6 +5185,9 @@ MonoBehaviour:
   happyTamingGoal: 70
   happyTimerDecrease: 30
   imHappy: 0
+  neighs:
+  - {fileID: 8300000, guid: fb0073cfa276f3942b2cca11dece094d, type: 3}
+  - {fileID: 8300000, guid: f7c8e276ca036b5448ef5e9beaf2be82, type: 3}
   funnyVelocity: 0
 --- !u!114 &8421579419517527268
 MonoBehaviour:
@@ -5284,6 +5289,115 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4952878224642938037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8421579419517527278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e287d6f3b96e544a9ff5735b9dc71b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flightForce: 0.2
+--- !u!82 &4705932477265649368
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8421579419517527278}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &8421579420001217947
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,11 +5469,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8421579419517527270}
     m_Modifications:
-    - target: {fileID: 7526545346950991174, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: m_Name
-      value: Heartsies
-      objectReference: {fileID: 0}
     - target: {fileID: 1160699851286769952, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5414,6 +5523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7526545346950991174, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: m_Name
+      value: Heartsies
       objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}

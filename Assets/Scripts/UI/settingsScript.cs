@@ -10,8 +10,10 @@ public class settingsScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.4f);
-        sfxSlider.value = PlayerPrefs.GetFloat("audioVolume");
+        musicSlider.value = PlayerPrefs.GetFloat("musicVolume", 0.1f);
+        sfxSlider.value = PlayerPrefs.GetFloat("audioVolume", 1f);
+        GameObject.Find("GOD").GetComponent<godScript>().muzik.volume = PlayerPrefs.GetFloat("musicVolume");
+        GameObject.Find("GOD").GetComponent<godScript>().audioVolume = PlayerPrefs.GetFloat("audioVolume");
     }
     public void audioChange()
     {
@@ -32,6 +34,11 @@ public class settingsScript : MonoBehaviour
             GameObject.Find("GOD").GetComponent<godScript>().muzik.volume = PlayerPrefs.GetFloat("musicVolume");
         }
         PlayerPrefs.Save();
+    }
+
+    public void deleteSavedata()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
 

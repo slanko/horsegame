@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseMenuScript : MonoBehaviour
 {
@@ -48,5 +49,10 @@ public class pauseMenuScript : MonoBehaviour
     public void closeSettingsMenu()
     {
         settingsMenu.SetActive(false);
+    }
+
+    public void returnToMainMenu()
+    {
+        SceneManager.LoadScene("Title");
     }
 }

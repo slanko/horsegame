@@ -19,8 +19,9 @@ public class godScript : MonoBehaviour
     public float horseCount;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        Time.timeScale = 1f;
         muzik = GetComponent<AudioSource>();
         if(tutorialTime == true)
         {

@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 2070886453354688633}
   - component: {fileID: 2070886453354688632}
   - component: {fileID: -1588608080480527375}
+  - component: {fileID: 5091830362696628512}
   m_Layer: 8
   m_Name: Springy
   m_TagString: horse
@@ -202,7 +203,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070886453354688631}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -438.67, y: -8.16, z: 14.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -299,7 +300,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!65 &2070886453354688634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -307,7 +308,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070886453354688631}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0807eeebcf6299d49b2cff9c56ea755d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -320,7 +321,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070886453354688631}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0807eeebcf6299d49b2cff9c56ea755d, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -441,6 +442,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5091830362696628512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070886453354688631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5016125b0c01e4a99ec427e6ab759b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeAmount: -25
+  jumpForce: 15
 --- !u!1 &5129892579505005353
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +672,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2070886453354688639}
     m_Modifications:
+    - target: {fileID: 7526545346950991174, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: m_Name
+      value: Heartsies
+      objectReference: {fileID: 0}
     - target: {fileID: 1160699851286769952, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -712,50 +732,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7526545346950991174, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: m_Name
-      value: Heartsies
-      objectReference: {fileID: 0}
-    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
       propertyPath: lengthInSec
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
-      value: -0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: InitialModule.gravityModifier.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: InitialModule.gravityModifier.minScalar
-      value: -0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
-        type: 3}
-      propertyPath: InitialModule.startSpeed.minScalar
-      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
@@ -764,13 +744,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 1
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
-      propertyPath: InitialModule.startLifetime.minMaxState
-      value: 3
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
@@ -779,8 +759,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 2
+      propertyPath: InitialModule.startSpeed.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.minScalar
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 169808128186190279, guid: 9547e453c5979c24c94de41b7572d62f,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2107661607276070375, guid: 9547e453c5979c24c94de41b7572d62f,
         type: 3}

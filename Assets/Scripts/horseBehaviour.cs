@@ -28,6 +28,7 @@ public class horseBehaviour : MonoBehaviour
     public AudioClip[] neighs;
     AudioSource aud;
     public AudioClip stepNoise;
+    public bool horseInWater;
 
     //horse riding movement stuff
     float vert, horiz;
@@ -187,5 +188,21 @@ public class horseBehaviour : MonoBehaviour
     public void playStepNoise()
     {
         aud.PlayOneShot(stepNoise);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.tag == "inWater")
+        {
+            horseInWater = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "inWater")
+        {
+            horseInWater = false;
+        }
     }
 }

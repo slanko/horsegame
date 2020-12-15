@@ -29,6 +29,8 @@ public class characterController : MonoBehaviour
     public KeyCode throwKey;
     Animator anim;
     public GameObject pauseMenu;
+    [SerializeField] GameObject[] teleportLocations;
+    [SerializeField] Animator physicalHudAnim;
 
     //ragdoll mode stuff
     [Header ("Ragdoll Mode Variables")]
@@ -120,6 +122,10 @@ public class characterController : MonoBehaviour
         movement = new Vector3(horiz, 0, vert);
         isMoving = movement.magnitude > 0;
         dB.enabled = false;
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            physicalHudAnim.SetTrigger("teleport");
+        }
     }
 
     void updateJumping()
@@ -140,6 +146,13 @@ public class characterController : MonoBehaviour
         if (Input.GetKeyDown(charInt.interactKey))
         {
             goToGrounded(new Vector3(-1, 0.5f, 0));
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if(charInt.hB.horseInWater == true)
+            {
+                physicalHudAnim.SetTrigger("teleport");
+            }
         }
     }
 
@@ -178,6 +191,35 @@ public class characterController : MonoBehaviour
         currentState = playerState.RAGDOLL;
         GameObject thaRagdoll = Instantiate(myRagdoll, transform.position, transform.rotation, null);
         spinCamGoTo.targetToFollow = thaRagdoll.GetComponent<ragdollLaunchScript>().myHips;
+    }
+
+    public void teleportToStable()
+    {
+        bool onHorse = false;
+        if (currentState == playerState.RIDING)
+        {
+            onHorse = true;
+        }
+        float shortestDistance = Mathf.Infinity, dist;
+        GameObject selectedTeleporter = new GameObject();
+        foreach(GameObject teleporter in teleportLocations)
+        {
+            dist = Vector3.Distance(transform.position, teleporter.transform.position);
+            if(dist < shortestDistance)
+            {
+                shortestDistance = dist;
+                selectedTeleporter = teleporter;
+            }
+        }
+        if(onHorse == false)
+        {
+            transform.position = selectedTeleporter.transform.position;
+        }
+        if(onHorse == true)
+        {
+            charInt.hB.transform.position = selectedTeleporter.transform.position;
+        }
+
     }
 
     // Update is called once per frame

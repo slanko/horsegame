@@ -11,6 +11,7 @@ TagManager:
   - horseBoard
   - horseLoggerInteract
   - tree
+  - inWater
   layers:
   - Default
   - TransparentFX

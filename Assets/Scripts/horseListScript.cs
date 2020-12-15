@@ -22,7 +22,9 @@ public class horseListScript : MonoBehaviour
     public int currentHorseSelected = 0;
     public GameObject currentPipe;
     godScript GOD;
-    
+    [SerializeField] GameObject[] stableHorses;
+    [SerializeField] GameObject playerObject;
+
 
     private void Start()
     {
@@ -34,6 +36,10 @@ public class horseListScript : MonoBehaviour
     {
         if(horseDetected == true)
         {
+            if(hB.horseName == "FISHMIN")
+            {
+                notAHorse();
+            }
             bool itsME = false;
             for(int i = 0; i < masterHorseList.Length; i++)
             {
@@ -88,5 +94,24 @@ public class horseListScript : MonoBehaviour
         {
                 horseDetected = false;
         }
+    }
+
+    private void notAHorse()
+    {
+        //get current stable horse. set it's text to "that's not a horse..."
+        //lol we could just get the closest one
+        //yea
+        float shortestDistance = Mathf.Infinity, dist;
+        GameObject selectedStablehorse = new GameObject();
+        foreach (GameObject horse in stableHorses)
+        {
+            dist = Vector3.Distance(playerObject.transform.position, horse.transform.position);
+            if (dist < shortestDistance)
+            {
+                shortestDistance = dist;
+                selectedStablehorse = horse;
+            }
+        }
+        selectedStablehorse.GetComponent<stableHorseScript>().setMyText("that's not a horse...");
     }
 }

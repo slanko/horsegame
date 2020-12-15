@@ -14,6 +14,7 @@ public class characterInteract : MonoBehaviour
     public KeyCode interactKey;
     public horseBehaviour hB;
     public KeyCode thumbsUpKey;
+    [SerializeField] Animator controlsPopupAnim;
 
     //throwing stuff
     [Header ("Throwing Stuff")]
@@ -136,6 +137,11 @@ public class characterInteract : MonoBehaviour
         if (Input.GetKeyDown(thumbsUpKey))
         {
             uiAnim.SetTrigger("thumbsUp");
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            controlsPopupAnim.SetTrigger("popUp");
         }
     }
     public void actuallyThrow()

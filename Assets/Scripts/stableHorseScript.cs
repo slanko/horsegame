@@ -20,7 +20,7 @@ public class stableHorseScript : MonoBehaviour
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        aud.volume = PlayerPrefs.GetFloat("audioVolume") * 0.5f ;
+        //aud.volume = PlayerPrefs.GetFloat("audioVolume") * 0.5f ;
         if(tutorialHorse == true)
         {
             anim.SetBool("tutorialHorse", true);

@@ -31,6 +31,7 @@ public class characterController : MonoBehaviour
     public GameObject pauseMenu;
     [SerializeField] GameObject[] teleportLocations;
     [SerializeField] Animator physicalHudAnim;
+    [SerializeField] GameObject teleportText;
 
     //ragdoll mode stuff
     [Header ("Ragdoll Mode Variables")]
@@ -147,12 +148,17 @@ public class characterController : MonoBehaviour
         {
             goToGrounded(new Vector3(-1, 0.5f, 0));
         }
-        if (Input.GetKeyDown(KeyCode.T))
+        if (charInt.hB.horseInWater == true)
         {
-            if(charInt.hB.horseInWater == true)
+            if(Input.GetKeyDown(KeyCode.T))
             {
                 physicalHudAnim.SetTrigger("teleport");
             }
+            teleportText.SetActive(true);
+        }
+        else
+        {
+            teleportText.SetActive(false);
         }
     }
 

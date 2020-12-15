@@ -8,13 +8,17 @@ public class treeScript : MonoBehaviour
     public GameObject myItem;
     public GameObject[] dropPoints;
     int numberOfTimesInteracted;
+    [SerializeField] bool fruitOnTree = true;
     private void Start()
     {
         myName = myItem.GetComponent<throwablesScript>().myName + " tree";
-        foreach(GameObject droppo in dropPoints)
+        if(fruitOnTree == true)
         {
-            var myFruit = Instantiate(myItem, droppo.transform.position, droppo.transform.rotation);
-            myFruit.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            foreach (GameObject droppo in dropPoints)
+            {
+                var myFruit = Instantiate(myItem, droppo.transform.position, droppo.transform.rotation);
+                myFruit.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            }
         }
     }
 

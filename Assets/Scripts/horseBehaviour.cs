@@ -181,7 +181,7 @@ public class horseBehaviour : MonoBehaviour
 
     void neighTime()
     {
-        aud.PlayOneShot(neighs[Random.Range(0, neighs.Length)]);
+        aud.PlayOneShot(neighs[Random.Range(0, neighs.Length - 1)]);
         Invoke("neighTime", Random.Range(10, 60));
     }
 

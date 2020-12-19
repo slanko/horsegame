@@ -14,6 +14,7 @@ public class characterController : MonoBehaviour
         RAGDOLL,
         MENU
     }
+
     public playerState currentState;
 
     public GameObject cam;
@@ -32,6 +33,7 @@ public class characterController : MonoBehaviour
     [SerializeField] GameObject[] teleportLocations;
     [SerializeField] Animator physicalHudAnim;
     [SerializeField] GameObject teleportText;
+    [SerializeField] GameObject horseDiary;
 
     //ragdoll mode stuff
     [Header ("Ragdoll Mode Variables")]
@@ -92,7 +94,7 @@ public class characterController : MonoBehaviour
         //debug thing
         debugText.text = currentState.ToString();
         //cam stuff
-        if(pauseMenu.activeSelf == false)
+        if(pauseMenu.activeSelf == false && horseDiary.activeSelf == false)
         {
             var cameraAngle = cam.transform.rotation.eulerAngles;
             camCurrentX += Input.GetAxis("Mouse Y") * camSensitivityY;
@@ -107,7 +109,7 @@ public class characterController : MonoBehaviour
         }
         if (currentState != playerState.RIDING && currentState != playerState.TAMING)
         {
-            if(pauseMenu.activeSelf == false)
+            if(pauseMenu.activeSelf == false && horseDiary.activeSelf == false)
             {
                 transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * camSensitivityX, 0));
             }

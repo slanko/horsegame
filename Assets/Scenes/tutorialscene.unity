@@ -3500,6 +3500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookTarget: {fileID: 1238175548}
+  findPlayer: 0
 --- !u!4 &410456911201575723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2482604447619751087, guid: ead8f27821d056842b30de9703b18f46,
@@ -3582,6 +3583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timerDecrease
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546880179683754202, guid: ead8f27821d056842b30de9703b18f46,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ead8f27821d056842b30de9703b18f46, type: 3}
@@ -4031,6 +4037,11 @@ PrefabInstance:
       propertyPath: teleportText
       value: 
       objectReference: {fileID: 1944583312}
+    - target: {fileID: 5445931687483387270, guid: 6d37b090bef4b6d46b8a05c26e4fcf45,
+        type: 3}
+      propertyPath: horseDiary
+      value: 
+      objectReference: {fileID: 1068128520}
     - target: {fileID: 5445931687483387277, guid: 6d37b090bef4b6d46b8a05c26e4fcf45,
         type: 3}
       propertyPath: m_Name
